@@ -1,156 +1,76 @@
-# 🧭 MazeRL: Interactive Q-Learning Maze Simulator
+# agentprof: tracing AI agents with eBPF
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Now-blue?style=for-the-badge&logo=github)](https://srajan0149.github.io/MazeRL/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+agentprof traces AI coding agents from the Linux kernel with eBPF, without modifying the agents. For each run it records:
 
-MazeRL is an elegant, interactive web-based visualization tool that brings **Q-Learning** to life in a grid-based maze environment. Design custom mazes, train an RL agent, fine-tune hyperparameters, and witness optimal paths emerge - all seamlessly within your browser.
+- processes and tool calls (the full process tree)
+- syscalls, with counts and latency
+- CPU time, split into user and kernel
+- network connections and bytes, labelled as LLM, telemetry, DNS or package traffic
+- memory
 
+From these it reconstructs each LLM call (request size, response size, time to first byte) and splits the run time into LLM wait, tool execution, the agent's own work and rate-limit back-off.
 
----
-## 🌐 Live Demo
-Experience the fully interactive MazeRL simulator directly in your browser.  
-👉 **Live here:** https://srajan0149.github.io/MazeRL/
-No installation required - pure client-side execution.
+**Status:** first stage. The tracer is built and validated, and there is a first comparison of two agents on the same model. Work on local models and on PARAM is next.
 
-![alt text](demo.png)
+## Layout
 
+| Path | What it is |
+|---|---|
+| `agentprof/bpf/agentprof.bpf.c` | The eBPF program: process, scheduler, syscall, socket and TCP tracepoints |
+| `agentprof/` | Loader, runner and analyzer (`runner.py`, `kernel.py`, `libbpf.py`, `analyze.py`, `html_report.py`, …) |
+| `tools/ref_agent.py` | Minimal reference agent, the baseline harness |
+| `tasks/` | 8 small coding tasks, each with an instruction, start files and a PASS/fail checker |
+| `experiments/run_matrix.py` | Runs agent × task × repetition under the tracer |
+| `experiments/compare_campaigns.py` | Builds a comparison page from two campaigns |
+| `experiments/results/` | Results of the first comparison (24 runs per agent) |
+| `scripts/setup_wsl.sh` | One-time setup on WSL2 / Ubuntu |
 
+## Requirements
 
----
+- Linux kernel 6.3 or newer (tested on WSL2, kernel 6.18), with root access for eBPF
+- python3, libbpf and clang (installed by the setup script)
+- For the experiments: a Gemini API key, plus [Gemini CLI](https://github.com/google-gemini/gemini-cli) for the second agent
 
-## 🚀 Overview
+## Quick start
 
-Dive into a comprehensive playground for mastering Reinforcement Learning with MazeRL:
+```bash
+sudo bash scripts/setup_wsl.sh          # install, compile the eBPF program, check the machine
+export GEMINI_API_KEY="<your key>"
 
-* **Craft Custom Mazes**: Build environments tailored to your experiments.
-* **Tune Q-Learning Parameters**: Adjust learning dynamics in real-time.
-* **Visualize Learning**: Watch the agent evolve through animated exploration and heatmaps.
-* **Export & Import**: Preserve and share Q-tables for advanced workflows.
-* **Optimal Path Rendering**: Reveal the agent's learned policy with a single click.
+# reference agent: all 8 tasks, 3 runs each
+sudo -E python3 experiments/run_matrix.py --agents ref-gemini --model gemini-3.5-flash-lite \
+    --tasks all --reps 3 --user $USER --campaign baseline_flashlite_wsl --cooldown 30
 
-Powered by pure client-side **JavaScript**, MazeRL requires no installation or backend—pure, premium interactivity at your fingertips.
+# Gemini CLI: the same tasks
+sudo -E python3 experiments/run_matrix.py --agents gemini-cli --model gemini-3.5-flash-lite \
+    --tasks all --reps 3 --user $USER --campaign gemini_cli_flashlite_wsl --cooldown 30
 
----
+# comparison page
+python3 experiments/compare_campaigns.py experiments/results/baseline_flashlite_wsl \
+    experiments/results/gemini_cli_flashlite_wsl -o experiments/results/comparison.html
+```
 
-## ✨ Features
+Each run writes a `report.html` and a `summary.json` to `experiments/results/<campaign>/<agent>__<task>__r<n>/`. Each campaign also gets a `results.md` table.
 
-### 🧱 Interactive Maze Builder
-* **Left-click**: Toggle walls to shape your maze.
-* **Shift + Left-click**: Designate the goal (treasure).
-* **Right-click**: Position the start (agent).
-* **Dynamic Sizing**: Customize grid and cell dimensions.
-* **Responsive Canvas**: Adapts effortlessly to your screen.
+## First results
 
-### 🤖 Real-Time Q-Learning Engine
-* **Hyperparameter Control**:
-    * **$\alpha$ (Alpha)**: Learning rate for updates.
-    * **$\gamma$ (Gamma)**: Discount factor for future rewards.
-    * **$\varepsilon$ (Epsilon)**: Exploration-exploitation balance.
-* **Flexible Training**: Run from quick tests to extensive sessions.
-* **Granular Control**: Step through episodes, pause, resume, or halt anytime.
-* **Live Updates**: Observe Q-table evolution in real-time.
+These come from a laptop (Intel Core Ultra 5 125H, WSL2) using gemini-3.5-flash-lite. All 48 runs passed.
 
-### 🎬 Immersive Training Visualization
-* **Animated Exploration**: See the agent navigate dynamically.
-* **Visit Heatmaps**: Color-coded insights into cell frequencies.
-* **Final Path Display**: Unveil the optimal greedy trajectory post-training.
+| | Reference agent | Gemini CLI |
+|---|---|---|
+| Median run time | 18.3 s | 16.8 s |
+| Time waiting on the LLM | 94% | 86% |
+| Request size (first → last) | 1.6 → 5.7 KB | 44.5 → 58.7 KB |
+| Agent CPU | 87 ms | 1,891 ms |
+| Network connections | 2.2 | 8.5 |
 
-### 📄 Advanced Q-Table Tools
-* **Export Q-Table**: Copy as JSON for external use.
-* **Import Q-Table**: Restore saved states seamlessly.
-* **Reset Functionality**: Wipe Q-values and visit data for fresh starts.
+Tracer overhead on the same laptop: +0.9% on a whole agent session, and 0.2–0.7% of one CPU during real runs.
 
----
+The full comparison is in `experiments/results/comparison.html`. GitHub shows HTML as source, so download it and open it in a browser.
 
-## 🕹️ How to Use
+## Next
 
-### 1️⃣ Build Your Maze
-* **Walls**: **Left-click** to erect barriers.
-* **Goal**: **Shift + Left-click** to place the treasure.
-* **Start**: **Right-click** to set the agent's origin.
+- Local models (Ollama), first on the laptop and then on PARAM (V100), with results both with and without profiling
+- Standard benchmarks (Terminal-Bench, SWE-bench), cold runs with caches cleared, per-call distributions and token counts
 
-### 2️⃣ Configure RL Settings
-Fine-tune **Grid and Cell sizes**, **Episode count**, and the **$\alpha$, $\gamma$, $\varepsilon$** values for precise control.
-
-### 3️⃣ Train the Agent
-Leverage intuitive controls:
-* **Start Train**: Initiate learning.
-* **Pause**: Suspend and resume at will.
-* **Step Ep**: Advance one episode at a time.
-* **Reset Q**: Clear knowledge and heatmaps.
-
-### 4️⃣ Explore Results
-* **Show Final Path**: Render the optimal policy.
-* **Import/Export**: Continue training across sessions.
-
----
-
-## 🎛️ Controls Summary
-
-### 🖱 Mouse Controls
-| Action | Control |
-| :--- | :--- |
-| **Toggle Wall** | Left-click |
-| **Set Goal** | Shift + Left-click |
-| **Set Start** | Right-click |
-
-### 🔘 Button Controls
-| Button | Function |
-| :--- | :--- |
-| **Start Train** | Begin training process |
-| **Pause** | Pause/resume training |
-| **Step Ep** | Execute a single episode |
-| **Stop** | Halt training |
-| **Reset Q** | Clear Q-table and visits |
-| **Show Final Path** | Display optimal greedy path |
-| **Copy Q** | Export Q-table (JSON) |
-| **Paste Q** | Import Q-table |
-
-### ⌨️ Keyboard Shortcuts
-* **Space**: Pause/Resume training
-* **P**: Show final path
-* **R**: Reset Q-table
-
----
-
-## 🧠 Q-Learning Deep Dive
-
-### State Space
-Each grid cell $(r, c)$ represents a unique state $s$.
-
-### Actions
-* Up
-* Right
-* Down
-* Left
-
-### Reward Function
-| Event | Reward $R$ |
-| :--- | :--- |
-| **Move** | -0.04 |
-| **Hit Wall** | -0.6 |
-| **Reach Goal** | +10 |
-
-### Q-Update Equation
-The agent updates its knowledge using the Bellman equation derivative:
-  - `Q(s,a) = Q(s,a) + α * (reward + γ * max(Q(s', all_actions)) - Q(s,a))`
-
-### Policy
-**Epsilon-Greedy Exploration**:
-* With probability $\varepsilon$: Select a **random action**.
-* With probability $1 - \varepsilon$: Choose the action with the **highest Q-value**.
-
----
-
-All the team members have Equally contributed
-Siddhartha Nayak, Kshitij Kasodkar, Srajan Deharia, Rahul Khichar, Raj Kumar Gupta
-
-
-```text
-MazeRL/
-│── index.html          # Main application structure
-│── script.js           # Core Q-Learning and visualization logic
-│── styles.css          # Styling and layout
-│── demo.png            # Screenshot/Demo image
-│── README.md           # This file
-└── assets/             # Auxiliary files (if any)
+The code was written with AI assistance (Claude).
