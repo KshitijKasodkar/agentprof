@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+# raw trace files (large); reports and summaries are kept
+events.jsonl
+samples.jsonl
+meta.json

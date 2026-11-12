@@ -1,0 +1,121 @@
+Warning: --allowed-tools cli argument and tools.allowed in settings.json are deprecated and will be removed in 1.0: Migrate to Policy Engine: https://geminicli.com/docs/core/policy-engine/
+Ripgrep is not available. Falling back to GrepTool.
+{
+  "session_id": "e6e15956-e867-4a7f-8ce9-c054b40bb269",
+  "response": "I have successfully renamed `calc` to `calculate_total` across all project files (`pricing.py`, `cart.py`, and `billing.py`). \n\n- Verified via grep search that no `calc` function definitions or calls remain in the codebase.\n- Executed `python3 run_tests.py`, which passed successfully (`ok`).",
+  "stats": {
+    "models": {
+      "gemini-3.5-flash-lite": {
+        "api": {
+          "totalRequests": 6,
+          "totalErrors": 0,
+          "totalLatencyMs": 14998,
+          "errorsByType": {}
+        },
+        "tokens": {
+          "input": 24061,
+          "prompt": 66410,
+          "candidates": 780,
+          "total": 67895,
+          "cached": 42349,
+          "thoughts": 705,
+          "tool": 0
+        },
+        "roles": {
+          "main": {
+            "totalRequests": 6,
+            "totalErrors": 0,
+            "totalLatencyMs": 14998,
+            "tokens": {
+              "input": 24061,
+              "prompt": 66410,
+              "candidates": 780,
+              "total": 67895,
+              "cached": 42349,
+              "thoughts": 705,
+              "tool": 0
+            }
+          }
+        }
+      }
+    },
+    "tools": {
+      "totalCalls": 16,
+      "totalSuccess": 16,
+      "totalFail": 0,
+      "totalDurationMs": 304,
+      "totalDecisions": {
+        "accept": 16,
+        "reject": 0,
+        "modify": 0,
+        "auto_accept": 0
+      },
+      "byName": {
+        "update_topic": {
+          "count": 5,
+          "success": 5,
+          "fail": 0,
+          "durationMs": 12,
+          "decisions": {
+            "accept": 5,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "run_shell_command": {
+          "count": 2,
+          "success": 2,
+          "fail": 0,
+          "durationMs": 167,
+          "decisions": {
+            "accept": 2,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "grep_search": {
+          "count": 2,
+          "success": 2,
+          "fail": 0,
+          "durationMs": 50,
+          "decisions": {
+            "accept": 2,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "read_file": {
+          "count": 4,
+          "success": 4,
+          "fail": 0,
+          "durationMs": 38,
+          "decisions": {
+            "accept": 4,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "replace": {
+          "count": 3,
+          "success": 3,
+          "fail": 0,
+          "durationMs": 37,
+          "decisions": {
+            "accept": 3,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        }
+      }
+    },
+    "files": {
+      "totalLinesAdded": 5,
+      "totalLinesRemoved": 5
+    }
+  }
+}

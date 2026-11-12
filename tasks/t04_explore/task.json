@@ -1,0 +1,2 @@
+{"id": "t04_explore", "tags": ["explore", "read-only"], "timeout_s": 600,
+ "prompt": "In this repository, which file defines the function `compute_checksum`, and what is the value of the constant it uses as the modulus? Write the answer to answer.txt as `<relative path> <number>`."}

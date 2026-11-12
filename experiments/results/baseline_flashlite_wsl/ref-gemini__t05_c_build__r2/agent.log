@@ -1,0 +1,1 @@
+I have fixed the missing semicolon in `primes.c`. `make` now succeeds and `./primes 30` correctly outputs `2 3 5 7 11 13 17 19 23 29`.

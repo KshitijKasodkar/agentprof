@@ -1,0 +1,1 @@
+I have successfully renamed the function `calc` to `calculate_total` across all files (`pricing.py`, `cart.py`, `billing.py`, and `run_tests.py`), and confirmed that `python3 run_tests.py` passes successfully with no remaining `calc(` calls.

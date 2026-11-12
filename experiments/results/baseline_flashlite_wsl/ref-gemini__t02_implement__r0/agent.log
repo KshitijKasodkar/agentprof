@@ -1,0 +1,1 @@
+I have implemented the `top_words` function in `words.py` to correctly extract words (lowercased, a-z only, split on non-alphabetic characters), count their frequencies, and return the top $k$ items sorted by frequency descending and ties broken alphabetically. All tests in `test_words.py` pass successfully.

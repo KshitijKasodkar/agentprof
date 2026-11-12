@@ -1,0 +1,7 @@
+I have found and fixed the bug in `stats.py`. 
+
+**Cause of the bug:**
+In the `median` function, when the list length `n` was even, it calculated the average of `s[mid]` and `s[mid + 1]` instead of `s[mid - 1]` and `s[mid]`. For `[4, 1, 3, 2]`, sorted is `[1, 2, 3, 4]` (`n=4`), where `mid = 2`. It previously used `s[2]` (3) and `s[3]` (4) averaging to `3.5`, instead of `s[1]` (2) and `s[2]` (3) averaging to `2.5`.
+
+**Fix:**
+Updated `median` to correctly compute the average of `s[mid - 1]` and `s[mid]` when `n` is even.

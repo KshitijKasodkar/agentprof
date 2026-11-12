@@ -1,0 +1,2 @@
+{"id": "t07_refactor", "tags": ["python", "refactor"], "timeout_s": 900,
+ "prompt": "Rename the function `calc` to `calculate_total` everywhere in this project (definition and all uses). `python3 run_tests.py` must still pass and no `calc(` call may remain."}

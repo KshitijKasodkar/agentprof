@@ -1,0 +1,4 @@
+I have successfully:
+1. Created a Python virtual environment in `.venv`.
+2. Installed the `tabulate` package inside the virtual environment.
+3. Read `data.csv` and used `tabulate` with `tablefmt='grid'` to generate a grid-format table including the header row, saving it to `table.txt`.

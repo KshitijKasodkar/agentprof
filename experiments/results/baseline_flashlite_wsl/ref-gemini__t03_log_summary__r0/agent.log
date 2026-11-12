@@ -1,0 +1,1 @@
+I have successfully processed `access.log`, counted the occurrences of each HTTP status code, sorted them by code in ascending order, and written the output to `summary.txt`.

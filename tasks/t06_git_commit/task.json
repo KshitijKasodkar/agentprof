@@ -1,0 +1,2 @@
+{"id": "t06_git_commit", "tags": ["git"], "timeout_s": 600,
+ "prompt": "This is a git repository with uncommitted changes. Commit only the change to app.py (not notes.txt) with the commit message `fix greeting`."}

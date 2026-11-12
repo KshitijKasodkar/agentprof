@@ -1,0 +1,2 @@
+{"id": "t08_pip_venv", "tags": ["network", "packages"], "timeout_s": 900,
+ "prompt": "Create a Python virtual environment in .venv, install the package `tabulate` into it, and use it to write table.txt containing a grid-format table (tabulate tablefmt='grid') of the data in data.csv with its header row."}

@@ -1,0 +1,2 @@
+{"id": "t02_implement", "tags": ["python", "feature"], "timeout_s": 600,
+ "prompt": "Implement the function `top_words` in words.py as described in its docstring, so that `python3 test_words.py` passes."}

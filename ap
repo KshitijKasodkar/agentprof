@@ -1,0 +1,8 @@
+#!/bin/sh
+# launcher: ./agentprof <command> ...   (adds sudo for commands that need root)
+HERE="$(cd "$(dirname "$0")" && pwd)"
+case "$1" in
+  run|attach|doctor)
+    if [ "$(id -u)" != "0" ]; then exec sudo -E env PYTHONPATH="$HERE" python3 -m agentprof "$@"; fi ;;
+esac
+PYTHONPATH="$HERE" exec python3 -m agentprof "$@"

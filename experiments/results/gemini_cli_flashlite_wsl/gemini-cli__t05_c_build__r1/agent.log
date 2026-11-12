@@ -1,0 +1,109 @@
+Warning: --allowed-tools cli argument and tools.allowed in settings.json are deprecated and will be removed in 1.0: Migrate to Policy Engine: https://geminicli.com/docs/core/policy-engine/
+Ripgrep is not available. Falling back to GrepTool.
+{
+  "session_id": "92220baf-498d-4a4c-ad3d-b0ae32d8b3bf",
+  "response": "I have fixed the compilation error in `primes.c` by adding the missing semicolon on line 8. `make` now compiles successfully, and `./primes 30` correctly outputs:\n\n```\n2 3 5 7 11 13 17 19 23 29\n```",
+  "stats": {
+    "models": {
+      "gemini-3.5-flash-lite": {
+        "api": {
+          "totalRequests": 6,
+          "totalErrors": 0,
+          "totalLatencyMs": 13354,
+          "errorsByType": {}
+        },
+        "tokens": {
+          "input": 24167,
+          "prompt": 64563,
+          "candidates": 483,
+          "total": 65798,
+          "cached": 40396,
+          "thoughts": 752,
+          "tool": 0
+        },
+        "roles": {
+          "main": {
+            "totalRequests": 6,
+            "totalErrors": 0,
+            "totalLatencyMs": 13354,
+            "tokens": {
+              "input": 24167,
+              "prompt": 64563,
+              "candidates": 483,
+              "total": 65798,
+              "cached": 40396,
+              "thoughts": 752,
+              "tool": 0
+            }
+          }
+        }
+      }
+    },
+    "tools": {
+      "totalCalls": 8,
+      "totalSuccess": 8,
+      "totalFail": 0,
+      "totalDurationMs": 139,
+      "totalDecisions": {
+        "accept": 8,
+        "reject": 0,
+        "modify": 0,
+        "auto_accept": 0
+      },
+      "byName": {
+        "update_topic": {
+          "count": 3,
+          "success": 3,
+          "fail": 0,
+          "durationMs": 6,
+          "decisions": {
+            "accept": 3,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "read_file": {
+          "count": 2,
+          "success": 2,
+          "fail": 0,
+          "durationMs": 26,
+          "decisions": {
+            "accept": 2,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "run_shell_command": {
+          "count": 2,
+          "success": 2,
+          "fail": 0,
+          "durationMs": 99,
+          "decisions": {
+            "accept": 2,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "replace": {
+          "count": 1,
+          "success": 1,
+          "fail": 0,
+          "durationMs": 8,
+          "decisions": {
+            "accept": 1,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        }
+      }
+    },
+    "files": {
+      "totalLinesAdded": 1,
+      "totalLinesRemoved": 1
+    }
+  }
+}

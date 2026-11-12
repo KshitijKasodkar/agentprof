@@ -1,0 +1,2 @@
+{"id": "t01_fix_bug", "tags": ["python", "debug"], "timeout_s": 600,
+ "prompt": "The tests in test_stats.py fail. Find the bug in stats.py and fix it. Run `python3 test_stats.py` to check; do not change the tests."}

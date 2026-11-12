@@ -1,0 +1,85 @@
+Warning: --allowed-tools cli argument and tools.allowed in settings.json are deprecated and will be removed in 1.0: Migrate to Policy Engine: https://geminicli.com/docs/core/policy-engine/
+Ripgrep is not available. Falling back to GrepTool.
+{
+  "session_id": "031c2be8-1fc8-4b98-b6de-e10dad8bf022",
+  "response": "`src/core/integrity.py` defines `compute_checksum`, and the modulus constant is `65521`. The answer has been successfully written to `answer.txt`.",
+  "stats": {
+    "models": {
+      "gemini-3.5-flash-lite": {
+        "api": {
+          "totalRequests": 3,
+          "totalErrors": 0,
+          "totalLatencyMs": 5788,
+          "errorsByType": {}
+        },
+        "tokens": {
+          "input": 14448,
+          "prompt": 30677,
+          "candidates": 96,
+          "total": 31364,
+          "cached": 16229,
+          "thoughts": 591,
+          "tool": 0
+        },
+        "roles": {
+          "main": {
+            "totalRequests": 3,
+            "totalErrors": 0,
+            "totalLatencyMs": 5788,
+            "tokens": {
+              "input": 14448,
+              "prompt": 30677,
+              "candidates": 96,
+              "total": 31364,
+              "cached": 16229,
+              "thoughts": 591,
+              "tool": 0
+            }
+          }
+        }
+      }
+    },
+    "tools": {
+      "totalCalls": 2,
+      "totalSuccess": 2,
+      "totalFail": 0,
+      "totalDurationMs": 24,
+      "totalDecisions": {
+        "accept": 2,
+        "reject": 0,
+        "modify": 0,
+        "auto_accept": 0
+      },
+      "byName": {
+        "grep_search": {
+          "count": 1,
+          "success": 1,
+          "fail": 0,
+          "durationMs": 13,
+          "decisions": {
+            "accept": 1,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "write_file": {
+          "count": 1,
+          "success": 1,
+          "fail": 0,
+          "durationMs": 11,
+          "decisions": {
+            "accept": 1,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        }
+      }
+    },
+    "files": {
+      "totalLinesAdded": 1,
+      "totalLinesRemoved": 0
+    }
+  }
+}

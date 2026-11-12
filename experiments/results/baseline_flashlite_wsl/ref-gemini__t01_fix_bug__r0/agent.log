@@ -1,0 +1,7 @@
+I have successfully found and fixed the bug in `stats.py`. 
+
+**Cause of the bug:**
+In the `median` function for even-length lists, the code calculated the average of `s[mid]` and `s[mid + 1]` instead of `s[mid - 1]` and `s[mid]`. For `[1, 2, 3, 4]`, `n = 4`, `mid = 2`, it averaged `s[2]` (3) and `s[3]` (4) resulting in `3.5` instead of averaging `s[1]` (2) and `s[2]` (3) resulting in `2.5`.
+
+**Fix:**
+Updated `median` to use `(s[mid - 1] + s[mid]) / 2` when `n % 2 == 0`. All tests now pass successfully.

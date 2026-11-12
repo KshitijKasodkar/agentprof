@@ -1,0 +1,2 @@
+{"id": "t05_c_build", "tags": ["c", "build"], "timeout_s": 900,
+ "prompt": "`make` fails for this small C program. Fix the source so that `make` succeeds and `./primes 30` prints the primes below 30 separated by spaces."}

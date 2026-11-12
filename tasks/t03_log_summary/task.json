@@ -1,0 +1,2 @@
+{"id": "t03_log_summary", "tags": ["shell", "data"], "timeout_s": 600,
+ "prompt": "access.log is a web server log. Write summary.txt with one line per HTTP status code, formatted `<code> <count>`, sorted by code ascending."}

@@ -1,0 +1,97 @@
+Warning: --allowed-tools cli argument and tools.allowed in settings.json are deprecated and will be removed in 1.0: Migrate to Policy Engine: https://geminicli.com/docs/core/policy-engine/
+Ripgrep is not available. Falling back to GrepTool.
+{
+  "session_id": "327cce5b-bfd7-489a-b511-ffbb5cb94eb3",
+  "response": "I have successfully analyzed `access.log`, counted the occurrences of each HTTP status code, sorted them in ascending order, and written the results to `summary.txt`.",
+  "stats": {
+    "models": {
+      "gemini-3.5-flash-lite": {
+        "api": {
+          "totalRequests": 5,
+          "totalErrors": 0,
+          "totalLatencyMs": 11269,
+          "errorsByType": {}
+        },
+        "tokens": {
+          "input": 24525,
+          "prompt": 65139,
+          "candidates": 392,
+          "total": 66793,
+          "cached": 40614,
+          "thoughts": 1262,
+          "tool": 0
+        },
+        "roles": {
+          "main": {
+            "totalRequests": 5,
+            "totalErrors": 0,
+            "totalLatencyMs": 11269,
+            "tokens": {
+              "input": 24525,
+              "prompt": 65139,
+              "candidates": 392,
+              "total": 66793,
+              "cached": 40614,
+              "thoughts": 1262,
+              "tool": 0
+            }
+          }
+        }
+      }
+    },
+    "tools": {
+      "totalCalls": 5,
+      "totalSuccess": 5,
+      "totalFail": 0,
+      "totalDurationMs": 62,
+      "totalDecisions": {
+        "accept": 5,
+        "reject": 0,
+        "modify": 0,
+        "auto_accept": 0
+      },
+      "byName": {
+        "update_topic": {
+          "count": 2,
+          "success": 2,
+          "fail": 0,
+          "durationMs": 7,
+          "decisions": {
+            "accept": 2,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "read_file": {
+          "count": 2,
+          "success": 2,
+          "fail": 0,
+          "durationMs": 15,
+          "decisions": {
+            "accept": 2,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "run_shell_command": {
+          "count": 1,
+          "success": 1,
+          "fail": 0,
+          "durationMs": 40,
+          "decisions": {
+            "accept": 1,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        }
+      }
+    },
+    "files": {
+      "totalLinesAdded": 0,
+      "totalLinesRemoved": 0
+    }
+  }
+}

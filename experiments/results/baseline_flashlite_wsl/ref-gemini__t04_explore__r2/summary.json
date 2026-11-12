@@ -1,0 +1,1817 @@
+{
+ "run": "ref-gemini__t04_explore__r2",
+ "label": "ref-gemini__t04_explore__r2",
+ "command": [
+  "python3",
+  "/home/kshitij_kshitij/agentprof/tools/ref_agent.py",
+  "--base",
+  "https://generativelanguage.googleapis.com/v1beta/openai",
+  "--model",
+  "gemini-3.5-flash-lite",
+  "--key-env",
+  "GEMINI_API_KEY",
+  "--task",
+  "In this repository, which file defines the function `compute_checksum`, and what is the value of the constant it uses as the modulus? Write the answer to answer.txt as `<relative path> <number>`.",
+  "--log",
+  "/home/kshitij_kshitij/agentprof/experiments/results/baseline_flashlite_wsl/ref-gemini__t04_explore__r2/ref_agent_truth.jsonl",
+  "--max-steps",
+  "25"
+ ],
+ "host": {
+  "hostname": "Kshitij",
+  "kernel": "6.18.58.1-microsoft-standard-WSL2",
+  "machine": "x86_64",
+  "python": "3.12.3",
+  "cpus": 18,
+  "mem_kb": 7870764,
+  "clk_tck": 100
+ },
+ "exit_code": 0,
+ "agent_main": {
+  "pid": 3538,
+  "label": "python3 /home/kshitij_kshitij/agentprof/tools/ref_agent.py --base https://generativelanguage.googleapis.com/v1beta/openai --model gemini-3.5-flash-lite --key..."
+ },
+ "counts": {
+  "processes": 5,
+  "tool_calls": 4,
+  "helpers": 0,
+  "tool_calls_act_phase": 4,
+  "llm_retries": 0,
+  "llm_calls_successful": 7,
+  "tool_uses_logged": 6,
+  "tool_calls_by_phase": {
+   "act": 4
+  },
+  "llm_calls": 7,
+  "llm_aux_calls": 0,
+  "connections": 2,
+  "tool_calls_per_llm_call": 0.57
+ },
+ "timesplit": {
+  "run_s": 25.619,
+  "llm_only_s": 25.486,
+  "tool_only_s": 0.01,
+  "both_s": 0.0,
+  "neither_s": 0.123,
+  "llm_share_pct": 99.48,
+  "tool_share_pct": 0.04,
+  "llm_only_pct": 99.48,
+  "tool_only_pct": 0.04,
+  "both_pct": 0.0,
+  "neither_pct": 0.48,
+  "startup_s": 0.109,
+  "after_last_llm_s": 0.008,
+  "between_llm_calls_s": 0.015,
+  "provider_backoff_s": 0.0,
+  "provider_backoff_pct": 0.0,
+  "os_exec_like_pct": 0.52,
+  "llm_wait_ttfb_s": 24.228,
+  "llm_streaming_s": 1.258
+ },
+ "llm": {
+  "endpoints": [
+   "generativelanguage.googleapis.com"
+  ],
+  "ttfb_ms_median": 2574.404,
+  "ttfb_ms_max": 9488.432,
+  "stream_ms_median": 7.157,
+  "req_bytes_first": 1635,
+  "req_bytes_last": 5229,
+  "req_bytes_median": 3570,
+  "append_bytes_median": 534.5,
+  "resp_bytes_median": 1835,
+  "gap_between_calls_ms_median": 3.184,
+  "calls": [
+   {
+    "n": 0,
+    "kind": "llm",
+    "conn": 1,
+    "endpoint": "generativelanguage.googleapis.com",
+    "start_s": 0.1092,
+    "req_bytes": 1635,
+    "resp_bytes": 2391,
+    "ttfb_ms": 2101.342,
+    "stream_ms": 5.758,
+    "total_ms": 2107.221,
+    "rx_reads": 12,
+    "path": null
+   },
+   {
+    "n": 1,
+    "kind": "llm",
+    "conn": 1,
+    "endpoint": "generativelanguage.googleapis.com",
+    "start_s": 2.22,
+    "req_bytes": 2094,
+    "resp_bytes": 1830,
+    "ttfb_ms": 2269.751,
+    "stream_ms": 7.157,
+    "total_ms": 2276.938,
+    "rx_reads": 10,
+    "path": null
+   },
+   {
+    "n": 2,
+    "kind": "llm",
+    "conn": 1,
+    "endpoint": "generativelanguage.googleapis.com",
+    "start_s": 4.5011,
+    "req_bytes": 3031,
+    "resp_bytes": 1835,
+    "ttfb_ms": 9488.432,
+    "stream_ms": 0.972,
+    "total_ms": 9489.437,
+    "rx_reads": 10,
+    "path": null
+   },
+   {
+    "n": 3,
+    "kind": "llm",
+    "conn": 1,
+    "endpoint": "generativelanguage.googleapis.com",
+    "start_s": 13.9943,
+    "req_bytes": 3570,
+    "resp_bytes": 1819,
+    "ttfb_ms": 2042.638,
+    "stream_ms": 75.475,
+    "total_ms": 2118.145,
+    "rx_reads": 10,
+    "path": null
+   },
+   {
+    "n": 4,
+    "kind": "llm",
+    "conn": 1,
+    "endpoint": "generativelanguage.googleapis.com",
+    "start_s": 16.1131,
+    "req_bytes": 4214,
+    "resp_bytes": 1855,
+    "ttfb_ms": 2869.596,
+    "stream_ms": 6.554,
+    "total_ms": 2876.214,
+    "rx_reads": 10,
+    "path": null
+   },
+   {
+    "n": 5,
+    "kind": "llm",
+    "conn": 1,
+    "endpoint": "generativelanguage.googleapis.com",
+    "start_s": 18.9898,
+    "req_bytes": 4744,
+    "resp_bytes": 1808,
+    "ttfb_ms": 2574.404,
+    "stream_ms": 16.906,
+    "total_ms": 2591.347,
+    "rx_reads": 10,
+    "path": null
+   },
+   {
+    "n": 6,
+    "kind": "llm",
+    "conn": 1,
+    "endpoint": "generativelanguage.googleapis.com",
+    "start_s": 21.584,
+    "req_bytes": 5229,
+    "resp_bytes": 2478,
+    "ttfb_ms": 2881.506,
+    "stream_ms": 1145.528,
+    "total_ms": 4027.067,
+    "rx_reads": 14,
+    "path": null
+   }
+  ]
+ },
+ "roles": {
+  "agent": {
+   "user_ns": 71226976,
+   "sys_ns": 8617473,
+   "runq_ns": 8977,
+   "sleep_ns": 25567289810,
+   "io_ns": 876042,
+   "vcsw": 43,
+   "ivcsw": 1,
+   "syscalls": 2287,
+   "sys_errs": 234,
+   "sys_wall_ns": 25576766868,
+   "inet_tx": 25136,
+   "inet_rx": 17632,
+   "unix_tx": 143,
+   "unix_rx": 66,
+   "file_rd": 1898961,
+   "file_wr": 3801,
+   "other_rd": 583,
+   "other_wr": 159,
+   "opens": 168,
+   "open_fail": 13,
+   "forks": 4,
+   "processes": 1
+  },
+  "tool": {
+   "user_ns": 5595422,
+   "sys_ns": 4056022,
+   "runq_ns": 0,
+   "sleep_ns": 0,
+   "io_ns": 0,
+   "vcsw": 0,
+   "ivcsw": 0,
+   "syscalls": 1777,
+   "sys_errs": 177,
+   "sys_wall_ns": 4036467,
+   "inet_tx": 0,
+   "inet_rx": 0,
+   "unix_tx": 0,
+   "unix_rx": 0,
+   "file_rd": 64510,
+   "file_wr": 0,
+   "other_rd": 0,
+   "other_wr": 582,
+   "opens": 271,
+   "open_fail": 99,
+   "forks": 0,
+   "processes": 4
+  }
+ },
+ "syscalls": {
+  "tool": {
+   "total": 1777,
+   "distinct": 44,
+   "top": [
+    {
+     "name": "rt_sigaction",
+     "group": "process",
+     "count": 323,
+     "total_ms": 0.07,
+     "avg_us": 0.22,
+     "max_ms": 0.001,
+     "errs": 0
+    },
+    {
+     "name": "openat",
+     "group": "file",
+     "count": 271,
+     "total_ms": 0.574,
+     "avg_us": 2.12,
+     "max_ms": 0.094,
+     "errs": 99
+    },
+    {
+     "name": "close",
+     "group": "file",
+     "count": 200,
+     "total_ms": 0.126,
+     "avg_us": 0.63,
+     "max_ms": 0.01,
+     "errs": 0
+    },
+    {
+     "name": "mmap",
+     "group": "memory",
+     "count": 199,
+     "total_ms": 0.66,
+     "avg_us": 3.32,
+     "max_ms": 0.064,
+     "errs": 0
+    },
+    {
+     "name": "fstat",
+     "group": "file",
+     "count": 177,
+     "total_ms": 0.062,
+     "avg_us": 0.35,
+     "max_ms": 0.001,
+     "errs": 0
+    },
+    {
+     "name": "newfstatat",
+     "group": "file",
+     "count": 92,
+     "total_ms": 0.093,
+     "avg_us": 1.01,
+     "max_ms": 0.008,
+     "errs": 36
+    },
+    {
+     "name": "read",
+     "group": "file",
+     "count": 89,
+     "total_ms": 0.2,
+     "avg_us": 2.24,
+     "max_ms": 0.029,
+     "errs": 0
+    },
+    {
+     "name": "mprotect",
+     "group": "memory",
+     "count": 33,
+     "total_ms": 0.15,
+     "avg_us": 4.53,
+     "max_ms": 0.011,
+     "errs": 0
+    },
+    {
+     "name": "access",
+     "group": "file",
+     "count": 28,
+     "total_ms": 0.036,
+     "avg_us": 1.3,
+     "max_ms": 0.005,
+     "errs": 11
+    },
+    {
+     "name": "fcntl",
+     "group": "file",
+     "count": 28,
+     "total_ms": 0.005,
+     "avg_us": 0.2,
+     "max_ms": 0.001,
+     "errs": 0
+    },
+    {
+     "name": "brk",
+     "group": "memory",
+     "count": 25,
+     "total_ms": 0.02,
+     "avg_us": 0.81,
+     "max_ms": 0.002,
+     "errs": 0
+    },
+    {
+     "name": "rt_sigprocmask",
+     "group": "process",
+     "count": 21,
+     "total_ms": 0.005,
+     "avg_us": 0.24,
+     "max_ms": 0.0,
+     "errs": 0
+    },
+    {
+     "name": "getegid",
+     "group": "process",
+     "count": 20,
+     "total_ms": 0.003,
+     "avg_us": 0.15,
+     "max_ms": 0.0,
+     "errs": 0
+    },
+    {
+     "name": "execve",
+     "group": "process",
+     "count": 20,
+     "total_ms": 1.734,
+     "avg_us": 86.68,
+     "max_ms": 0.249,
+     "errs": 12
+    },
+    {
+     "name": "getgid",
+     "group": "process",
+     "count": 20,
+     "total_ms": 0.003,
+     "avg_us": 0.17,
+     "max_ms": 0.0,
+     "errs": 0
+    },
+    {
+     "name": "geteuid",
+     "group": "process",
+     "count": 20,
+     "total_ms": 0.004,
+     "avg_us": 0.19,
+     "max_ms": 0.0,
+     "errs": 0
+    },
+    {
+     "name": "getuid",
+     "group": "process",
+     "count": 20,
+     "total_ms": 0.004,
+     "avg_us": 0.21,
+     "max_ms": 0.001,
+     "errs": 0
+    },
+    {
+     "name": "pread64",
+     "group": "file",
+     "count": 16,
+     "total_ms": 0.006,
+     "avg_us": 0.38,
+     "max_ms": 0.001,
+     "errs": 0
+    },
+    {
+     "name": "getdents64",
+     "group": "file",
+     "count": 14,
+     "total_ms": 0.038,
+     "avg_us": 2.71,
+     "max_ms": 0.013,
+     "errs": 0
+    },
+    {
+     "name": "ioctl",
+     "group": "file",
+     "count": 14,
+     "total_ms": 0.012,
+     "avg_us": 0.87,
+     "max_ms": 0.001,
+     "errs": 14
+    },
+    {
+     "name": "getppid",
+     "group": "process",
+     "count": 12,
+     "total_ms": 0.003,
+     "avg_us": 0.26,
+     "max_ms": 0.001,
+     "errs": 0
+    },
+    {
+     "name": "getpid",
+     "group": "process",
+     "count": 12,
+     "total_ms": 0.004,
+     "avg_us": 0.3,
+     "max_ms": 0.001,
+     "errs": 0
+    },
+    {
+     "name": "prlimit64",
+     "group": "process",
+     "count": 12,
+     "total_ms": 0.008,
+     "avg_us": 0.66,
+     "max_ms": 0.001,
+     "errs": 0
+    },
+    {
+     "name": "munmap",
+     "group": "memory",
+     "count": 11,
+     "total_ms": 0.068,
+     "avg_us": 6.16,
+     "max_ms": 0.01,
+     "errs": 0
+    },
+    {
+     "name": "dup2",
+     "group": "file",
+     "count": 8,
+     "total_ms": 0.005,
+     "avg_us": 0.61,
+     "max_ms": 0.001,
+     "errs": 0
+    }
+   ],
+   "groups": {
+    "process": {
+     "count": 522,
+     "total_ms": 1.866
+    },
+    "file": {
+     "count": 959,
+     "total_ms": 1.255
+    },
+    "memory": {
+     "count": 268,
+     "total_ms": 0.898
+    },
+    "sync": {
+     "count": 24,
+     "total_ms": 0.014
+    },
+    "network": {
+     "count": 4,
+     "total_ms": 0.002
+    }
+   }
+  },
+  "agent": {
+   "total": 2287,
+   "distinct": 65,
+   "top": [
+    {
+     "name": "newfstatat",
+     "group": "file",
+     "count": 438,
+     "total_ms": 0.645,
+     "avg_us": 1.47,
+     "max_ms": 0.074,
+     "errs": 55
+    },
+    {
+     "name": "read",
+     "group": "file",
+     "count": 369,
+     "total_ms": 32.949,
+     "avg_us": 89.29,
+     "max_ms": 30.734,
+     "errs": 28
+    },
+    {
+     "name": "fstat",
+     "group": "file",
+     "count": 231,
+     "total_ms": 0.092,
+     "avg_us": 0.4,
+     "max_ms": 0.002,
+     "errs": 0
+    },
+    {
+     "name": "close",
+     "group": "file",
+     "count": 184,
+     "total_ms": 0.371,
+     "avg_us": 2.02,
+     "max_ms": 0.044,
+     "errs": 0
+    },
+    {
+     "name": "lseek",
+     "group": "file",
+     "count": 179,
+     "total_ms": 0.039,
+     "avg_us": 0.22,
+     "max_ms": 0.001,
+     "errs": 4
+    },
+    {
+     "name": "openat",
+     "group": "file",
+     "count": 168,
+     "total_ms": 0.574,
+     "avg_us": 3.42,
+     "max_ms": 0.064,
+     "errs": 13
+    },
+    {
+     "name": "ioctl",
+     "group": "file",
+     "count": 110,
+     "total_ms": 0.077,
+     "avg_us": 0.7,
+     "max_ms": 0.006,
+     "errs": 104
+    },
+    {
+     "name": "mmap",
+     "group": "memory",
+     "count": 76,
+     "total_ms": 0.37,
+     "avg_us": 4.87,
+     "max_ms": 0.043,
+     "errs": 0
+    },
+    {
+     "name": "rt_sigaction",
+     "group": "process",
+     "count": 66,
+     "total_ms": 0.012,
+     "avg_us": 0.18,
+     "max_ms": 0.001,
+     "errs": 0
+    },
+    {
+     "name": "poll",
+     "group": "wait/poll",
+     "count": 54,
+     "total_ms": 25535.844,
+     "avg_us": 472886.0,
+     "max_ms": 9488.36,
+     "errs": 0
+    },
+    {
+     "name": "brk",
+     "group": "memory",
+     "count": 52,
+     "total_ms": 0.238,
+     "avg_us": 4.57,
+     "max_ms": 0.013,
+     "errs": 0
+    },
+    {
+     "name": "write",
+     "group": "file",
+     "count": 46,
+     "total_ms": 0.874,
+     "avg_us": 19.0,
+     "max_ms": 0.056,
+     "errs": 0
+    },
+    {
+     "name": "getpid",
+     "group": "process",
+     "count": 44,
+     "total_ms": 0.021,
+     "avg_us": 0.48,
+     "max_ms": 0.002,
+     "errs": 0
+    },
+    {
+     "name": "connect",
+     "group": "network",
+     "count": 38,
+     "total_ms": 0.237,
+     "avg_us": 6.24,
+     "max_ms": 0.081,
+     "errs": 13
+    },
+    {
+     "name": "getdents64",
+     "group": "file",
+     "count": 36,
+     "total_ms": 0.346,
+     "avg_us": 9.61,
+     "max_ms": 0.058,
+     "errs": 0
+    },
+    {
+     "name": "futex",
+     "group": "sync",
+     "count": 29,
+     "total_ms": 0.017,
+     "avg_us": 0.59,
+     "max_ms": 0.001,
+     "errs": 0
+    },
+    {
+     "name": "mprotect",
+     "group": "memory",
+     "count": 16,
+     "total_ms": 0.067,
+     "avg_us": 4.22,
+     "max_ms": 0.009,
+     "errs": 0
+    },
+    {
+     "name": "getsockname",
+     "group": "network",
+     "count": 11,
+     "total_ms": 0.006,
+     "avg_us": 0.55,
+     "max_ms": 0.002,
+     "errs": 0
+    },
+    {
+     "name": "rt_sigprocmask",
+     "group": "process",
+     "count": 10,
+     "total_ms": 0.012,
+     "avg_us": 1.16,
+     "max_ms": 0.002,
+     "errs": 0
+    },
+    {
+     "name": "statx",
+     "group": "file",
+     "count": 10,
+     "total_ms": 0.005,
+     "avg_us": 0.46,
+     "max_ms": 0.001,
+     "errs": 0
+    },
+    {
+     "name": "socket",
+     "group": "network",
+     "count": 9,
+     "total_ms": 0.083,
+     "avg_us": 9.21,
+     "max_ms": 0.041,
+     "errs": 0
+    },
+    {
+     "name": "readlink",
+     "group": "file",
+     "count": 8,
+     "total_ms": 0.005,
+     "avg_us": 0.68,
+     "max_ms": 0.002,
+     "errs": 7
+    },
+    {
+     "name": "pipe2",
+     "group": "file",
+     "count": 8,
+     "total_ms": 0.07,
+     "avg_us": 8.75,
+     "max_ms": 0.021,
+     "errs": 0
+    },
+    {
+     "name": "munmap",
+     "group": "memory",
+     "count": 7,
+     "total_ms": 0.113,
+     "avg_us": 16.12,
+     "max_ms": 0.063,
+     "errs": 0
+    },
+    {
+     "name": "getrandom",
+     "group": "process",
+     "count": 7,
+     "total_ms": 0.018,
+     "avg_us": 2.54,
+     "max_ms": 0.007,
+     "errs": 0
+    }
+   ],
+   "groups": {
+    "file": {
+     "count": 1799,
+     "total_ms": 36.063
+    },
+    "memory": {
+     "count": 151,
+     "total_ms": 0.788
+    },
+    "process": {
+     "count": 161,
+     "total_ms": 2.185
+    },
+    "wait/poll": {
+     "count": 69,
+     "total_ms": 25536.029
+    },
+    "network": {
+     "count": 75,
+     "total_ms": 0.575
+    },
+    "sync": {
+     "count": 31,
+     "total_ms": 0.018
+    },
+    "time": {
+     "count": 1,
+     "total_ms": 1.106
+    }
+   }
+  }
+ },
+ "syscall_hist": {
+  "wait4": {
+   "14": 1,
+   "13": 3,
+   "9": 1
+  },
+  "mmap": {
+   "14": 1,
+   "13": 13,
+   "12": 41,
+   "15": 3,
+   "10": 102,
+   "9": 4,
+   "11": 111
+  },
+  "write": {
+   "11": 6,
+   "14": 16,
+   "12": 8,
+   "15": 9,
+   "10": 2,
+   "13": 9
+  },
+  "read": {
+   "13": 23,
+   "10": 128,
+   "11": 55,
+   "15": 17,
+   "24": 1,
+   "7": 107,
+   "9": 58,
+   "12": 24,
+   "16": 3,
+   "8": 19,
+   "14": 23
+  },
+  "readlink": {
+   "11": 1,
+   "9": 1,
+   "8": 6
+  },
+  "getegid": {
+   "7": 18,
+   "6": 3
+  },
+  "close": {
+   "12": 18,
+   "7": 93,
+   "13": 4,
+   "15": 2,
+   "11": 17,
+   "9": 84,
+   "10": 81,
+   "8": 85
+  },
+  "fstat": {
+   "9": 47,
+   "7": 163,
+   "10": 10,
+   "11": 3,
+   "8": 185
+  },
+  "getgid": {
+   "7": 17,
+   "6": 3,
+   "8": 1
+  },
+  "connect": {
+   "8": 9,
+   "9": 8,
+   "13": 1,
+   "7": 5,
+   "16": 1,
+   "10": 7,
+   "12": 1,
+   "14": 5,
+   "11": 1
+  },
+  "execve": {
+   "15": 2,
+   "10": 3,
+   "13": 1,
+   "14": 2,
+   "17": 8,
+   "19": 1,
+   "11": 7
+  },
+  "pread64": {
+   "9": 2,
+   "7": 5,
+   "8": 11
+  },
+  "fstatfs": {
+   "11": 1,
+   "10": 1
+  },
+  "set_robust_list": {
+   "7": 5,
+   "8": 4
+  },
+  "chdir": {
+   "12": 3,
+   "11": 2
+  },
+  "socket": {
+   "12": 3,
+   "13": 2,
+   "9": 2,
+   "15": 1,
+   "11": 1
+  },
+  "poll": {
+   "26": 2,
+   "10": 6,
+   "19": 2,
+   "16": 1,
+   "9": 6,
+   "30": 2,
+   "25": 1,
+   "21": 4,
+   "11": 1,
+   "24": 1,
+   "31": 4,
+   "8": 5,
+   "33": 1,
+   "29": 1,
+   "18": 2,
+   "23": 5,
+   "22": 2,
+   "20": 8
+  },
+  "getsockname": {
+   "9": 3,
+   "11": 1,
+   "8": 1,
+   "7": 6
+  },
+  "dup2": {
+   "10": 4,
+   "7": 4,
+   "8": 2,
+   "9": 1
+  },
+  "getrandom": {
+   "10": 4,
+   "12": 2,
+   "9": 8,
+   "8": 1
+  },
+  "brk": {
+   "7": 6,
+   "12": 18,
+   "13": 6,
+   "9": 4,
+   "11": 17,
+   "10": 16,
+   "8": 10
+  },
+  "uname": {
+   "10": 4,
+   "9": 2
+  },
+  "prctl": {
+   "6": 4,
+   "9": 1,
+   "7": 1
+  },
+  "setsockopt": {
+   "11": 3
+  },
+  "set_tid_address": {
+   "10": 1,
+   "8": 4,
+   "9": 4
+  },
+  "getpid": {
+   "8": 14,
+   "9": 12,
+   "7": 25,
+   "10": 4,
+   "6": 1
+  },
+  "ioctl": {
+   "11": 4,
+   "12": 1,
+   "9": 39,
+   "7": 22,
+   "8": 39,
+   "10": 19
+  },
+  "sendto": {
+   "13": 1,
+   "12": 1
+  },
+  "rt_sigaction": {
+   "7": 186,
+   "9": 7,
+   "10": 4,
+   "8": 87,
+   "6": 105
+  },
+  "mprotect": {
+   "12": 21,
+   "11": 23,
+   "10": 2,
+   "13": 3
+  },
+  "openat": {
+   "8": 20,
+   "15": 2,
+   "11": 109,
+   "9": 122,
+   "12": 41,
+   "16": 1,
+   "10": 132,
+   "13": 12
+  },
+  "recvmsg": {
+   "12": 1,
+   "9": 1
+  },
+  "getdents64": {
+   "9": 1,
+   "12": 5,
+   "14": 2,
+   "10": 1,
+   "13": 7,
+   "8": 8,
+   "11": 6,
+   "7": 16,
+   "15": 4
+  },
+  "geteuid": {
+   "9": 1,
+   "7": 19,
+   "8": 2
+  },
+  "getpgrp": {
+   "8": 3,
+   "9": 1
+  },
+  "lseek": {
+   "7": 80,
+   "9": 5,
+   "8": 54,
+   "6": 42
+  },
+  "rt_sigprocmask": {
+   "8": 8,
+   "7": 14,
+   "10": 6,
+   "9": 3
+  },
+  "gettid": {
+   "9": 1,
+   "8": 1
+  },
+  "getppid": {
+   "9": 1,
+   "6": 1,
+   "8": 3,
+   "7": 7
+  },
+  "mkdir": {
+   "11": 1
+  },
+  "epoll_pwait2": {
+   "10": 2,
+   "7": 1,
+   "9": 1
+  },
+  "getsockopt": {
+   "11": 1,
+   "8": 1
+  },
+  "access": {
+   "11": 6,
+   "12": 1,
+   "10": 7,
+   "9": 6,
+   "8": 9
+  },
+  "epoll_ctl": {
+   "15": 1,
+   "11": 1,
+   "7": 1,
+   "10": 2,
+   "8": 1
+  },
+  "getuid": {
+   "6": 4,
+   "8": 4,
+   "7": 13
+  },
+  "setgid": {
+   "14": 1
+  },
+  "newfstatat": {
+   "16": 1,
+   "9": 238,
+   "11": 62,
+   "7": 1,
+   "13": 3,
+   "8": 52,
+   "10": 163,
+   "12": 10
+  },
+  "futex": {
+   "8": 13,
+   "10": 9,
+   "7": 2,
+   "9": 13
+  },
+  "fcntl": {
+   "7": 21,
+   "9": 3,
+   "6": 4,
+   "8": 4
+  },
+  "recvfrom": {
+   "10": 1,
+   "12": 1,
+   "14": 2
+  },
+  "close_range": {
+   "7": 1,
+   "9": 4,
+   "10": 1,
+   "8": 2
+  },
+  "prlimit64": {
+   "9": 1,
+   "10": 4,
+   "8": 8
+  },
+  "getcwd": {
+   "10": 5,
+   "8": 1
+  },
+  "vfork": {
+   "18": 4
+  },
+  "munmap": {
+   "13": 5,
+   "12": 10,
+   "15": 1,
+   "11": 2
+  },
+  "sendmmsg": {
+   "17": 1
+  },
+  "epoll_create1": {
+   "12": 1,
+   "10": 1
+  },
+  "pipe2": {
+   "11": 1,
+   "10": 3,
+   "13": 3,
+   "14": 1
+  },
+  "bind": {
+   "11": 1
+  },
+  "clock_nanosleep": {
+   "20": 1
+  },
+  "sigaltstack": {
+   "10": 1
+  },
+  "statfs": {
+   "13": 1,
+   "9": 1
+  },
+  "timerfd_create": {
+   "10": 1
+  },
+  "epoll_wait": {
+   "16": 1
+  },
+  "fchdir": {
+   "8": 1
+  },
+  "rseq": {
+   "8": 4,
+   "9": 5
+  },
+  "setsid": {
+   "14": 1
+  },
+  "timerfd_settime": {
+   "10": 1
+  },
+  "arch_prctl": {
+   "7": 1,
+   "9": 2,
+   "8": 6
+  },
+  "getpeername": {
+   "9": 4,
+   "8": 2
+  },
+  "fadvise64": {
+   "9": 1
+  },
+  "statx": {
+   "8": 9,
+   "10": 1
+  },
+  "setuid": {
+   "14": 1
+  },
+  "setgroups": {
+   "12": 1
+  }
+ },
+ "memory": {
+  "source": "cgroup memory.current",
+  "peak_bytes": 12394496,
+  "avg_bytes": 11844299,
+  "peak_to_avg": 1.05,
+  "agent_main_hwm_kb": 23160,
+  "cgroup_final": {
+   "memory.current": 765952,
+   "memory.peak": 12472320,
+   "memory.stat": {
+    "anon": 0,
+    "file": 12288,
+    "kernel": 4096,
+    "kernel_stack": 0,
+    "pagetables": 0,
+    "sec_pagetables": 0,
+    "percpu": 0,
+    "sock": 0,
+    "vmalloc": 0,
+    "shmem": 0,
+    "file_mapped": 0,
+    "file_dirty": 12288,
+    "file_writeback": 0,
+    "swapcached": 0,
+    "anon_thp": 0,
+    "file_thp": 0,
+    "shmem_thp": 0,
+    "inactive_anon": 0,
+    "active_anon": 0,
+    "inactive_file": 4096,
+    "active_file": 0,
+    "unevictable": 0,
+    "slab_reclaimable": 3376,
+    "slab_unreclaimable": 272,
+    "slab": 3648,
+    "workingset_refault_anon": 0,
+    "workingset_refault_file": 0,
+    "workingset_activate_anon": 0,
+    "workingset_activate_file": 0,
+    "workingset_restore_anon": 0,
+    "workingset_restore_file": 0,
+    "workingset_nodereclaim": 0,
+    "pgdemote_kswapd": 0,
+    "pgdemote_direct": 0,
+    "pgdemote_khugepaged": 0,
+    "pgdemote_proactive": 0,
+    "pgscan": 0,
+    "pgsteal": 0,
+    "pswpin": 0,
+    "pswpout": 0,
+    "pgscan_kswapd": 0,
+    "pgscan_direct": 0,
+    "pgscan_khugepaged": 0,
+    "pgscan_proactive": 0,
+    "pgsteal_kswapd": 0,
+    "pgsteal_direct": 0,
+    "pgsteal_khugepaged": 0,
+    "pgsteal_proactive": 0,
+    "pgfault": 4186,
+    "pgmajfault": 0,
+    "pgrefill": 0,
+    "pgactivate": 0,
+    "pgdeactivate": 0,
+    "pglazyfree": 0,
+    "pglazyfreed": 0,
+    "swpin_zero": 0,
+    "swpout_zero": 0,
+    "thp_fault_alloc": 0,
+    "thp_collapse_alloc": 0,
+    "thp_swpout": 0,
+    "thp_swpout_fallback": 0
+   },
+   "cpu.stat": {
+    "usage_usec": 91160,
+    "user_usec": 65635,
+    "system_usec": 25524,
+    "nice_usec": 0,
+    "nr_periods": 0,
+    "nr_throttled": 0,
+    "throttled_usec": 0,
+    "nr_bursts": 0,
+    "burst_usec": 0
+   },
+   "io.stat": "",
+   "pids.current": 0,
+   "pids.peak": 2,
+   "memory.events": {
+    "low": 0,
+    "high": 0,
+    "max": 0,
+    "oom": 0,
+    "oom_kill": 0,
+    "oom_group_kill": 0
+   },
+   "cpu.pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=67\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=67",
+   "memory.pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=0\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=0",
+   "io.pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=0\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=0"
+  },
+  "note": "200 ms sampling: processes shorter than that may be missed; cgroup memory.peak is exact"
+ },
+ "network": {
+  "by_category": {
+   "dns": {
+    "connections": 1,
+    "tx": 102,
+    "rx": 454,
+    "exchanges": 1
+   },
+   "llm": {
+    "connections": 1,
+    "tx": 25034,
+    "rx": 17178,
+    "exchanges": 7
+   }
+  },
+  "connections": [
+   {
+    "id": 0,
+    "name": "10.255.255.254:53",
+    "category": "dns",
+    "proto": "udp",
+    "remote": "10.255.255.254:53",
+    "local_port": 0,
+    "owner": 3538,
+    "owner_role": "agent",
+    "owner_label": "python3 /home/kshitij_kshitij/agentprof/tools/ref_agent.p...",
+    "tls": false,
+    "alpn": [],
+    "tx": 102,
+    "rx": 454,
+    "start_s": 0.0581,
+    "life_s": 25.968,
+    "tcp_handshake_ms": null,
+    "tls_handshake_ms": null,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 1,
+    "name": "generativelanguage.googleapis.com",
+    "category": "llm",
+    "proto": "tcp",
+    "remote": "172.217.113.4:443",
+    "local_port": 57936,
+    "owner": 3538,
+    "owner_role": "agent",
+    "owner_label": "python3 /home/kshitij_kshitij/agentprof/tools/ref_agent.p...",
+    "tls": true,
+    "alpn": [],
+    "tx": 25034,
+    "rx": 17178,
+    "start_s": 0.0919,
+    "life_s": 25.531,
+    "tcp_handshake_ms": 11.639,
+    "tls_handshake_ms": 15.997,
+    "exchanges": 7,
+    "retrans": 1,
+    "http_paths": [],
+    "http_status": []
+   }
+  ],
+  "dns_lookups": 1
+ },
+ "files": {
+  "opens_by_role_and_area": {
+   "agent": {
+    "system libs": 109,
+    "project/other": 36,
+    "/etc": 12,
+    "/usr": 7,
+    "/proc": 2,
+    "/dev": 1,
+    "/usr/share": 1
+   },
+   "tool": {
+    "system libs": 215,
+    "project/other": 31,
+    "/etc": 8,
+    "/usr/share": 8,
+    "/dev": 5,
+    "/proc": 3,
+    "dot-dirs (config/cache)": 1
+   }
+  },
+  "top_opened": [
+   [
+    "/",
+    15
+   ],
+   [
+    "/etc/ld.so.cache",
+    13
+   ],
+   [
+    "/lib/x86_64-linux-gnu/libc.so.6",
+    9
+   ],
+   [
+    "/usr/share/locale/locale.alias",
+    9
+   ],
+   [
+    "/usr/lib/locale/C.utf8/LC_CTYPE",
+    9
+   ],
+   [
+    "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache",
+    9
+   ],
+   [
+    "/usr/lib/locale/C.utf8/LC_MESSAGES",
+    8
+   ],
+   [
+    "/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES",
+    8
+   ],
+   [
+    "/usr/lib/locale/C.utf8/LC_TIME",
+    8
+   ],
+   [
+    "/usr/lib/locale/C.utf8/LC_IDENTIFICATION",
+    7
+   ],
+   [
+    "/usr/lib/locale/C.utf8/LC_MEASUREMENT",
+    7
+   ],
+   [
+    "/usr/lib/locale/C.utf8/LC_TELEPHONE",
+    7
+   ],
+   [
+    "/usr/lib/locale/C.utf8/LC_ADDRESS",
+    7
+   ],
+   [
+    "/usr/lib/locale/C.utf8/LC_NAME",
+    7
+   ],
+   [
+    "/usr/lib/locale/C.utf8/LC_PAPER",
+    7
+   ],
+   [
+    "/usr/lib/locale/C.utf8/LC_MONETARY",
+    7
+   ],
+   [
+    "/usr/lib/locale/C.utf8/LC_COLLATE",
+    7
+   ],
+   [
+    "/usr/lib/locale/C.utf8/LC_NUMERIC",
+    7
+   ],
+   [
+    "/lib/x86_64-linux-gnu/libtinfo.so.6",
+    4
+   ],
+   [
+    "/lib/x86_64-linux-gnu/libpcre2-8.so.0",
+    3
+   ],
+   [
+    "/dev/null",
+    2
+   ],
+   [
+    "run",
+    2
+   ],
+   [
+    "usr",
+    2
+   ],
+   [
+    "lib",
+    2
+   ],
+   [
+    "/lib/x86_64-linux-gnu/libz.so.1",
+    2
+   ]
+  ],
+  "top_failed": [
+   [
+    "/usr/lib/locale/locale-archive",
+    9
+   ],
+   [
+    "/usr/lib/locale/C.UTF-8/LC_CTYPE",
+    9
+   ],
+   [
+    "/usr/lib/locale/C.UTF-8/LC_MESSAGES",
+    8
+   ],
+   [
+    "/usr/lib/locale/C.UTF-8/LC_TIME",
+    8
+   ],
+   [
+    "/usr/lib/locale/C.UTF-8/LC_IDENTIFICATION",
+    7
+   ],
+   [
+    "/usr/lib/locale/C.UTF-8/LC_MEASUREMENT",
+    7
+   ],
+   [
+    "/usr/lib/locale/C.UTF-8/LC_TELEPHONE",
+    7
+   ],
+   [
+    "/usr/lib/locale/C.UTF-8/LC_ADDRESS",
+    7
+   ],
+   [
+    "/usr/lib/locale/C.UTF-8/LC_NAME",
+    7
+   ],
+   [
+    "/usr/lib/locale/C.UTF-8/LC_PAPER",
+    7
+   ],
+   [
+    "/usr/lib/locale/C.UTF-8/LC_MONETARY",
+    7
+   ],
+   [
+    "/usr/lib/locale/C.UTF-8/LC_COLLATE",
+    7
+   ],
+   [
+    "/usr/lib/locale/C.UTF-8/LC_NUMERIC",
+    7
+   ],
+   [
+    "userdb",
+    4
+   ],
+   [
+    "/dev/tty",
+    4
+   ]
+  ],
+  "distinct_paths": 177,
+  "failed_opens": 112
+ },
+ "tool_calls": [
+  {
+   "id": 0,
+   "pid": 3575,
+   "label": "git status",
+   "command": null,
+   "phase": "act",
+   "start_s": 2.2173,
+   "dur_ms": 2.315,
+   "processes": 1,
+   "programs": [
+    "git"
+   ],
+   "exit_code": 128,
+   "cpu_user_ms": 1.332,
+   "cpu_sys_ms": 0.92,
+   "runq_ms": 0.0,
+   "sleep_ms": 0.0,
+   "io_wait_ms": 0.0,
+   "syscalls": 377,
+   "top_syscalls": [
+    [
+     "rt_sigaction",
+     81
+    ],
+    [
+     "openat",
+     48
+    ],
+    [
+     "mmap",
+     45
+    ],
+    [
+     "newfstatat",
+     33
+    ],
+    [
+     "close",
+     32
+    ],
+    [
+     "fstat",
+     30
+    ]
+   ],
+   "file_read": 13559,
+   "file_write": 0,
+   "pipe_other_rd": 0,
+   "pipe_other_wr": 69,
+   "net_tx": 0,
+   "net_rx": 0,
+   "opens": 48,
+   "open_fail": 18,
+   "peak_rss_kb": 2848
+  },
+  {
+   "id": 1,
+   "pid": 3582,
+   "label": "find . -maxdepth 3 -not -path */.*",
+   "command": null,
+   "phase": "act",
+   "start_s": 4.4972,
+   "dur_ms": 2.541,
+   "processes": 1,
+   "programs": [
+    "find"
+   ],
+   "exit_code": 0,
+   "cpu_user_ms": 1.451,
+   "cpu_sys_ms": 1.036,
+   "runq_ms": 0.0,
+   "sleep_ms": 0.0,
+   "io_wait_ms": 0.0,
+   "syscalls": 474,
+   "top_syscalls": [
+    [
+     "rt_sigaction",
+     80
+    ],
+    [
+     "openat",
+     71
+    ],
+    [
+     "close",
+     59
+    ],
+    [
+     "mmap",
+     55
+    ],
+    [
+     "fstat",
+     44
+    ],
+    [
+     "newfstatat",
+     24
+    ]
+   ],
+   "file_read": 17320,
+   "file_write": 0,
+   "pipe_other_rd": 0,
+   "pipe_other_wr": 433,
+   "net_tx": 0,
+   "net_rx": 0,
+   "opens": 71,
+   "open_fail": 27,
+   "peak_rss_kb": null
+  },
+  {
+   "id": 2,
+   "pid": 3613,
+   "label": "grep -rn def compute_checksum src/",
+   "command": null,
+   "phase": "act",
+   "start_s": 13.9909,
+   "dur_ms": 2.994,
+   "processes": 1,
+   "programs": [
+    "grep"
+   ],
+   "exit_code": 0,
+   "cpu_user_ms": 1.634,
+   "cpu_sys_ms": 1.257,
+   "runq_ms": 0.0,
+   "sleep_ms": 0.0,
+   "io_wait_ms": 0.0,
+   "syscalls": 543,
+   "top_syscalls": [
+    [
+     "openat",
+     89
+    ],
+    [
+     "rt_sigaction",
+     82
+    ],
+    [
+     "close",
+     69
+    ],
+    [
+     "fstat",
+     66
+    ],
+    [
+     "read",
+     54
+    ],
+    [
+     "mmap",
+     52
+    ]
+   ],
+   "file_read": 21979,
+   "file_write": 0,
+   "pipe_other_rd": 0,
+   "pipe_other_wr": 52,
+   "net_tx": 0,
+   "net_rx": 0,
+   "opens": 89,
+   "open_fail": 27,
+   "peak_rss_kb": null
+  },
+  {
+   "id": 3,
+   "pid": 3632,
+   "label": "cat answer.txt",
+   "command": null,
+   "phase": "act",
+   "start_s": 21.5816,
+   "dur_ms": 2.087,
+   "processes": 1,
+   "programs": [
+    "cat"
+   ],
+   "exit_code": 0,
+   "cpu_user_ms": 1.178,
+   "cpu_sys_ms": 0.843,
+   "runq_ms": 0.0,
+   "sleep_ms": 0.0,
+   "io_wait_ms": 0.0,
+   "syscalls": 383,
+   "top_syscalls": [
+    [
+     "rt_sigaction",
+     80
+    ],
+    [
+     "openat",
+     63
+    ],
+    [
+     "mmap",
+     47
+    ],
+    [
+     "close",
+     40
+    ],
+    [
+     "fstat",
+     37
+    ],
+    [
+     "newfstatat",
+     16
+    ]
+   ],
+   "file_read": 11652,
+   "file_write": 0,
+   "pipe_other_rd": 0,
+   "pipe_other_wr": 28,
+   "net_tx": 0,
+   "net_rx": 0,
+   "opens": 63,
+   "open_fail": 27,
+   "peak_rss_kb": null
+  }
+ ],
+ "helpers": [],
+ "process_tree": [
+  "3538 [AGENT] python3 /home/kshitij_kshitij/agentprof/tools/ref_agent.py --base https://generativelanguage.goog...  (+0.000s, 25618.8 ms, cpu u/s 71.2/8.6 ms, exit 0)",
+  "  3575 [tool 0] git status  (+2.217s, 2.3 ms, cpu u/s 1.3/0.9 ms, exit 128)",
+  "  3582 [tool 1] find . -maxdepth 3 -not -path */.*  (+4.497s, 2.5 ms, cpu u/s 1.5/1.0 ms, exit 0)",
+  "  3613 [tool 2] grep -rn def compute_checksum src/  (+13.991s, 3.0 ms, cpu u/s 1.6/1.3 ms, exit 0)",
+  "  3632 [tool 3] cat answer.txt  (+21.582s, 2.1 ms, cpu u/s 1.2/0.8 ms, exit 0)"
+ ],
+ "tracer": {
+  "events": 625,
+  "ringbuf_dropped": 0,
+  "bpf_load_s": 0.051,
+  "warnings": [
+   "PID namespace detected (WSL2/container): PIDs are translated to this namespace"
+  ],
+  "bpf_prog_stats": {
+   "tp_fork": [
+    133437,
+    114
+   ],
+   "tp_exec": [
+    203592,
+    110
+   ],
+   "tp_exit": [
+    102362,
+    113
+   ],
+   "tp_switch": [
+    17682433,
+    34032
+   ],
+   "raw_sys_enter": [
+    10398087,
+    107735
+   ],
+   "raw_sys_exit": [
+    11871771,
+    107731
+   ],
+   "tp_send_len": [
+    692479,
+    2805
+   ],
+   "tp_recv_len": [
+    2036404,
+    1817
+   ],
+   "tp_set_state": [
+    63165,
+    5
+   ],
+   "tp_retrans": [
+    29483,
+    1
+   ]
+  },
+  "bpf_total_ms": 43.213,
+  "bpf_runs": 254463,
+  "bpf_avg_ns": 169.8,
+  "bpf_cpu_pct_of_run": 0.17
+ },
+ "paper_metrics": {
+  "os_exec_like_pct": 0.52,
+  "tool_exec_share_pct": 0.04,
+  "llm_share_pct": 99.48,
+  "llm_calls": 7,
+  "tool_calls": 4,
+  "tool_calls_per_llm_call": 0.57,
+  "provider_backoff_pct": 0.0,
+  "memory_peak_to_avg": 1.05,
+  "req_bytes_growth": 3.2,
+  "append_bytes_median": 534.5,
+  "resp_to_req_bytes": 0.5717
+ }
+}

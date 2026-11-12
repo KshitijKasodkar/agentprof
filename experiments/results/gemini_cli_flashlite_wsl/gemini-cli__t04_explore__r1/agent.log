@@ -1,0 +1,85 @@
+Warning: --allowed-tools cli argument and tools.allowed in settings.json are deprecated and will be removed in 1.0: Migrate to Policy Engine: https://geminicli.com/docs/core/policy-engine/
+Ripgrep is not available. Falling back to GrepTool.
+{
+  "session_id": "f39675f4-46b7-41d5-9657-49ddf8366d63",
+  "response": "I have written `src/core/integrity.py 65521` to `answer.txt`.",
+  "stats": {
+    "models": {
+      "gemini-3.5-flash-lite": {
+        "api": {
+          "totalRequests": 3,
+          "totalErrors": 0,
+          "totalLatencyMs": 5389,
+          "errorsByType": {}
+        },
+        "tokens": {
+          "input": 14250,
+          "prompt": 30478,
+          "candidates": 80,
+          "total": 31026,
+          "cached": 16228,
+          "thoughts": 468,
+          "tool": 0
+        },
+        "roles": {
+          "main": {
+            "totalRequests": 3,
+            "totalErrors": 0,
+            "totalLatencyMs": 5389,
+            "tokens": {
+              "input": 14250,
+              "prompt": 30478,
+              "candidates": 80,
+              "total": 31026,
+              "cached": 16228,
+              "thoughts": 468,
+              "tool": 0
+            }
+          }
+        }
+      }
+    },
+    "tools": {
+      "totalCalls": 2,
+      "totalSuccess": 2,
+      "totalFail": 0,
+      "totalDurationMs": 25,
+      "totalDecisions": {
+        "accept": 2,
+        "reject": 0,
+        "modify": 0,
+        "auto_accept": 0
+      },
+      "byName": {
+        "grep_search": {
+          "count": 1,
+          "success": 1,
+          "fail": 0,
+          "durationMs": 14,
+          "decisions": {
+            "accept": 1,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "write_file": {
+          "count": 1,
+          "success": 1,
+          "fail": 0,
+          "durationMs": 11,
+          "decisions": {
+            "accept": 1,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        }
+      }
+    },
+    "files": {
+      "totalLinesAdded": 1,
+      "totalLinesRemoved": 0
+    }
+  }
+}

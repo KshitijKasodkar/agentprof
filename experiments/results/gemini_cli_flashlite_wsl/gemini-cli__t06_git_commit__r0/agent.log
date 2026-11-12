@@ -1,0 +1,73 @@
+Warning: --allowed-tools cli argument and tools.allowed in settings.json are deprecated and will be removed in 1.0: Migrate to Policy Engine: https://geminicli.com/docs/core/policy-engine/
+Ripgrep is not available. Falling back to GrepTool.
+{
+  "session_id": "3a8e0dff-3b6e-402e-b71e-eb59354ff9b3",
+  "response": "I have successfully staged and committed the changes to `app.py` with the commit message `fix greeting`, leaving `notes.txt` unstaged as requested.",
+  "stats": {
+    "models": {
+      "gemini-3.5-flash-lite": {
+        "api": {
+          "totalRequests": 3,
+          "totalErrors": 0,
+          "totalLatencyMs": 8314,
+          "errorsByType": {}
+        },
+        "tokens": {
+          "input": 16201,
+          "prompt": 32440,
+          "candidates": 131,
+          "total": 33361,
+          "cached": 16239,
+          "thoughts": 790,
+          "tool": 0
+        },
+        "roles": {
+          "main": {
+            "totalRequests": 3,
+            "totalErrors": 0,
+            "totalLatencyMs": 8314,
+            "tokens": {
+              "input": 16201,
+              "prompt": 32440,
+              "candidates": 131,
+              "total": 33361,
+              "cached": 16239,
+              "thoughts": 790,
+              "tool": 0
+            }
+          }
+        }
+      }
+    },
+    "tools": {
+      "totalCalls": 2,
+      "totalSuccess": 2,
+      "totalFail": 0,
+      "totalDurationMs": 55,
+      "totalDecisions": {
+        "accept": 2,
+        "reject": 0,
+        "modify": 0,
+        "auto_accept": 0
+      },
+      "byName": {
+        "run_shell_command": {
+          "count": 2,
+          "success": 2,
+          "fail": 0,
+          "durationMs": 55,
+          "decisions": {
+            "accept": 2,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        }
+      }
+    },
+    "files": {
+      "totalLinesAdded": 0,
+      "totalLinesRemoved": 0
+    }
+  }
+}

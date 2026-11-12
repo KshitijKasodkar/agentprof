@@ -1,0 +1,2 @@
+[ref_agent] HTTP 503, retry 1/6 in 2 s
+The file defining `compute_checksum` is `src/core/integrity.py` and the constant it uses as the modulus is `65521`. The answer has been written to `answer.txt`.

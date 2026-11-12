@@ -1,0 +1,1 @@
+I have found that `compute_checksum` is defined in `src/core/integrity.py` and uses the modulus constant `65521`. The answer has been written to `answer.txt`.

@@ -1,0 +1,140 @@
+Warning: --allowed-tools cli argument and tools.allowed in settings.json are deprecated and will be removed in 1.0: Migrate to Policy Engine: https://geminicli.com/docs/core/policy-engine/
+Ripgrep is not available. Falling back to GrepTool.
+Error executing tool run_shell_command: Tool execution denied by policy.
+Error executing tool run_shell_command: Tool execution denied by policy.
+Error executing tool run_shell_command: Tool execution denied by policy.
+Error executing tool run_shell_command: Tool execution denied by policy.
+Attempt 1 failed with status 503. Retrying with backoff... _ApiError: {"error":{"message":"{\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n","code":503,"status":"Service Unavailable"}}
+    at throwErrorIfNotOK (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-NGQU3QTQ.js:267940:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-NGQU3QTQ.js:267703:7
+    at async Models.generateContentStream (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-NGQU3QTQ.js:268799:16)
+    at async file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-NGQU3QTQ.js:313130:19
+    at async file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-NGQU3QTQ.js:289147:23
+    at async retryWithBackoff (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-NGQU3QTQ.js:309418:23)
+    at async GeminiChat.makeApiCallAndProcessStream (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-NGQU3QTQ.js:334666:28)
+    at async GeminiChat.streamWithRetries (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-NGQU3QTQ.js:334361:29)
+    at async Turn.run (file:///usr/lib/node_modules/@google/gemini-cli/bundle/chunk-NGQU3QTQ.js:335403:24) {
+  status: 503
+}
+{
+  "session_id": "7b36bb47-13e0-4a60-b182-29bba7ed9da2",
+  "response": "I have successfully created the Python virtual environment in `.venv`, installed `tabulate`, and generated `table.txt` containing the grid-format table from `data.csv`.",
+  "stats": {
+    "models": {
+      "gemini-3.5-flash-lite": {
+        "api": {
+          "totalRequests": 19,
+          "totalErrors": 1,
+          "totalLatencyMs": 47545,
+          "errorsByType": {
+            "ApiError": 1
+          }
+        },
+        "tokens": {
+          "input": 60102,
+          "prompt": 225748,
+          "candidates": 1381,
+          "total": 230198,
+          "cached": 165646,
+          "thoughts": 3069,
+          "tool": 0
+        },
+        "roles": {
+          "main": {
+            "totalRequests": 19,
+            "totalErrors": 1,
+            "totalLatencyMs": 47545,
+            "tokens": {
+              "input": 60102,
+              "prompt": 225748,
+              "candidates": 1381,
+              "total": 230198,
+              "cached": 165646,
+              "thoughts": 3069,
+              "tool": 0
+            }
+          }
+        }
+      }
+    },
+    "tools": {
+      "totalCalls": 17,
+      "totalSuccess": 13,
+      "totalFail": 4,
+      "totalDurationMs": 3958,
+      "totalDecisions": {
+        "accept": 13,
+        "reject": 0,
+        "modify": 0,
+        "auto_accept": 0
+      },
+      "byName": {
+        "update_topic": {
+          "count": 2,
+          "success": 2,
+          "fail": 0,
+          "durationMs": 5,
+          "decisions": {
+            "accept": 2,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "read_file": {
+          "count": 2,
+          "success": 2,
+          "fail": 0,
+          "durationMs": 16,
+          "decisions": {
+            "accept": 2,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "run_shell_command": {
+          "count": 10,
+          "success": 6,
+          "fail": 4,
+          "durationMs": 3923,
+          "decisions": {
+            "accept": 6,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "write_file": {
+          "count": 2,
+          "success": 2,
+          "fail": 0,
+          "durationMs": 10,
+          "decisions": {
+            "accept": 2,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        },
+        "list_directory": {
+          "count": 1,
+          "success": 1,
+          "fail": 0,
+          "durationMs": 4,
+          "decisions": {
+            "accept": 1,
+            "reject": 0,
+            "modify": 0,
+            "auto_accept": 0
+          }
+        }
+      }
+    },
+    "files": {
+      "totalLinesAdded": 29,
+      "totalLinesRemoved": 0
+    }
+  }
+}

@@ -1,0 +1,4295 @@
+{
+ "run": "gemini-cli__t08_pip_venv__r2",
+ "label": "gemini-cli__t08_pip_venv__r2",
+ "command": [
+  "gemini",
+  "-m",
+  "gemini-3.5-flash-lite",
+  "-p",
+  "Create a Python virtual environment in .venv, install the package `tabulate` into it, and use it to write table.txt containing a grid-format table (tabulate tablefmt='grid') of the data in data.csv with its header row.",
+  "--skip-trust",
+  "--approval-mode",
+  "auto_edit",
+  "-o",
+  "json",
+  "--allowed-tools",
+  "run_shell_command(python3)",
+  "--allowed-tools",
+  "run_shell_command(make)",
+  "--allowed-tools",
+  "run_shell_command(cc)",
+  "--allowed-tools",
+  "run_shell_command(gcc)",
+  "--allowed-tools",
+  "run_shell_command(./primes)",
+  "--allowed-tools",
+  "run_shell_command(git status)",
+  "--allowed-tools",
+  "run_shell_command(git diff)",
+  "--allowed-tools",
+  "run_shell_command(git add)",
+  "--allowed-tools",
+  "run_shell_command(git commit)",
+  "--allowed-tools",
+  "run_shell_command(git log)",
+  "--allowed-tools",
+  "run_shell_command(ls)",
+  "--allowed-tools",
+  "run_shell_command(cat)",
+  "--allowed-tools",
+  "run_shell_command(grep)",
+  "--allowed-tools",
+  "run_shell_command(awk)",
+  "--allowed-tools",
+  "run_shell_command(sort)",
+  "--allowed-tools",
+  "run_shell_command(uniq)",
+  "--allowed-tools",
+  "run_shell_command(head)",
+  "--allowed-tools",
+  "run_shell_command(wc)",
+  "--allowed-tools",
+  "run_shell_command(.venv/bin/pip)",
+  "--allowed-tools",
+  "run_shell_command(.venv/bin/python)"
+ ],
+ "host": {
+  "hostname": "Kshitij",
+  "kernel": "6.18.58.1-microsoft-standard-WSL2",
+  "machine": "x86_64",
+  "python": "3.12.3",
+  "cpus": 18,
+  "mem_kb": 7870764,
+  "clk_tck": 100
+ },
+ "exit_code": 0,
+ "agent_main": {
+  "pid": 22921,
+  "label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -m gemini-3.5-flash-lite -p Create a Python virtual environment in .venv, install the package `tabula..."
+ },
+ "counts": {
+  "processes": 64,
+  "tool_calls": 12,
+  "helpers": 0,
+  "tool_calls_act_phase": 6,
+  "llm_retries": 0,
+  "llm_calls_successful": null,
+  "tool_uses_logged": null,
+  "tool_calls_by_phase": {
+   "startup": 6,
+   "act": 6
+  },
+  "llm_calls": 17,
+  "llm_aux_calls": 0,
+  "connections": 50,
+  "tool_calls_per_llm_call": 0.71
+ },
+ "timesplit": {
+  "run_s": 133.972,
+  "llm_only_s": 128.771,
+  "tool_only_s": 2.882,
+  "both_s": 0.0,
+  "neither_s": 2.319,
+  "llm_share_pct": 96.12,
+  "tool_share_pct": 2.15,
+  "llm_only_pct": 96.12,
+  "tool_only_pct": 2.15,
+  "both_pct": 0.0,
+  "neither_pct": 1.73,
+  "startup_s": 1.423,
+  "after_last_llm_s": 0.017,
+  "between_llm_calls_s": 3.76,
+  "provider_backoff_s": 0.0,
+  "provider_backoff_pct": 0.0,
+  "os_exec_like_pct": 3.88,
+  "llm_wait_ttfb_s": 114.679,
+  "llm_streaming_s": 14.092
+ },
+ "llm": {
+  "endpoints": [
+   "generativelanguage.googleapis.com"
+  ],
+  "ttfb_ms_median": 6756.923,
+  "ttfb_ms_max": 8165.81,
+  "stream_ms_median": 13.709,
+  "req_bytes_first": 45241,
+  "req_bytes_last": 73059,
+  "req_bytes_median": 58828,
+  "append_bytes_median": 1609.5,
+  "resp_bytes_median": 3209,
+  "gap_between_calls_ms_median": 77.56,
+  "calls": [
+   {
+    "n": 0,
+    "kind": "llm",
+    "conn": 3,
+    "endpoint": "generativelanguage.googleapis.com",
+    "start_s": 1.4232,
+    "req_bytes": 45241,
+    "resp_bytes": 5741,
+    "ttfb_ms": 6535.823,
+    "stream_ms": 490.92,
+    "total_ms": 7026.743,
+    "rx_reads": 3,
+    "path": null
+   },
+   {
+    "n": 1,
+    "kind": "llm",
+    "conn": 5,
+    "endpoint": "generativelanguage.googleapis.com",
+    "start_s": 8.5379,
+    "req_bytes": 48814,
+    "resp_bytes": 2402,
+    "ttfb_ms": 5813.509,
+    "stream_ms": 6.242,
+    "total_ms": 5819.751,
+    "rx_reads": 2,
+    "path": null
+   },
+   {
+    "n": 2,
+    "kind": "llm",
+    "conn": 7,
+    "endpoint": "generativelanguage.googleapis.com",
+    "start_s": 14.4135,
+    "req_bytes": 49458,
+    "resp_bytes": 4709,
+    "ttfb_ms": 7650.239,
+    "stream_ms": 6069.707,
+    "total_ms": 13719.946,
+    "rx_reads": 4,
+    "path": null
+   },
+   {
+    "n": 3,
+    "kind": "llm",
+    "conn": 8,
+    "endpoint": "generativelanguage.googleapis.com",
+    "start_s": 28.1972,
+    "req_bytes": 51639,
+    "resp_bytes": 3354,
+    "ttfb_ms": 7931.799,
+    "stream_ms": 18.048,
+    "total_ms": 7949.847,
+    "rx_reads": 3,
+    "path": null
+   },
+   {
+    "n": 4,
+    "kind": "llm",
+    "conn": 10,
+    "endpoint": "generativelanguage.googleapis.com",
+    "start_s": 36.2588,
+    "req_bytes": 53243,
+    "resp_bytes": 3116,
+    "ttfb_ms": 7012.839,
+    "stream_ms": 8.281,
+    "total_ms": 7021.12,
+    "rx_reads": 3,
+    "path": null
+   },
+   {
+    "n": 5,
+    "kind": "llm",
+    "conn": 10,
+    "endpoint": "generativelanguage.googleapis.com",
+    "start_s": 45.3598,
+    "req_bytes": 54523,
+    "resp_bytes": 1916,
+    "ttfb_ms": 5453.736,
+    "stream_ms": 7.633,
+    "total_ms": 5461.369,
+    "rx_reads": 3,
+    "path": null
+   },
+   {
+    "n": 6,
+    "kind": "llm",
+    "conn": 10,
+    "endpoint": "generativelanguage.googleapis.com",
+    "start_s": 51.2962,
+    "req_bytes": 55522,
+    "resp_bytes": 3452,
+    "ttfb_ms": 6593.448,
+    "stream_ms": 6123.332,
+    "total_ms": 12716.78,
+    "rx_reads": 4,
+    "path": null
+   },
+   {
+    "n": 7,
+    "kind": "llm",
+    "conn": 16,
+    "endpoint": "generativelanguage.googleapis.com",
+    "start_s": 64.0793,
+    "req_bytes": 57137,
+    "resp_bytes": 3064,
+    "ttfb_ms": 6773.144,
+    "stream_ms": 11.518,
+    "total_ms": 6784.662,
+    "rx_reads": 3,
+    "path": null
+   },
+   {
+    "n": 8,
+    "kind": "llm",
+    "conn": 19,
+    "endpoint": "generativelanguage.googleapis.com",
+    "start_s": 70.9459,
+    "req_bytes": 58828,
+    "resp_bytes": 2426,
+    "ttfb_ms": 7280.99,
+    "stream_ms": 8.805,
+    "total_ms": 7289.795,
+    "rx_reads": 3,
+    "path": null
+   },
+   {
+    "n": 9,
+    "kind": "llm",
+    "conn": 24,
+    "endpoint": "generativelanguage.googleapis.com",
+    "start_s": 78.2819,
+    "req_bytes": 59468,
+    "resp_bytes": 4939,
+    "ttfb_ms": 7047.758,
+    "stream_ms": 363.046,
+    "total_ms": 7410.804,
+    "rx_reads": 4,
+    "path": null
+   },
+   {
+    "n": 10,
+    "kind": "llm",
+    "conn": 28,
+    "endpoint": "generativelanguage.googleapis.com",
+    "start_s": 85.7658,
+    "req_bytes": 61958,
+    "resp_bytes": 2953,
+    "ttfb_ms": 6380.734,
+    "stream_ms": 8.582,
+    "total_ms": 6389.316,
+    "rx_reads": 2,
+    "path": null
+   },
+   {
+    "n": 11,
+    "kind": "llm",
+    "conn": 30,
+    "endpoint": "generativelanguage.googleapis.com",
+    "start_s": 92.2549,
+    "req_bytes": 63100,
+    "resp_bytes": 3209,
+    "ttfb_ms": 6756.923,
+    "stream_ms": 13.709,
+    "total_ms": 6770.632,
+    "rx_reads": 3,
+    "path": null
+   },
+   {
+    "n": 12,
+    "kind": "llm",
+    "conn": 34,
+    "endpoint": "generativelanguage.googleapis.com",
+    "start_s": 99.3362,
+    "req_bytes": 65600,
+    "resp_bytes": 5930,
+    "ttfb_ms": 8165.81,
+    "stream_ms": 718.336,
+    "total_ms": 8884.146,
+    "rx_reads": 4,
+    "path": null
+   },
+   {
+    "n": 13,
+    "kind": "llm",
+    "conn": 34,
+    "endpoint": "generativelanguage.googleapis.com",
+    "start_s": 108.3074,
+    "req_bytes": 68886,
+    "resp_bytes": 2033,
+    "ttfb_ms": 5590.364,
+    "stream_ms": 9.033,
+    "total_ms": 5599.397,
+    "rx_reads": 4,
+    "path": null
+   },
+   {
+    "n": 14,
+    "kind": "llm",
+    "conn": 34,
+    "endpoint": "generativelanguage.googleapis.com",
+    "start_s": 113.9182,
+    "req_bytes": 69867,
+    "resp_bytes": 3616,
+    "ttfb_ms": 6587.242,
+    "stream_ms": 76.723,
+    "total_ms": 6663.965,
+    "rx_reads": 4,
+    "path": null
+   },
+   {
+    "n": 15,
+    "kind": "llm",
+    "conn": 44,
+    "endpoint": "generativelanguage.googleapis.com",
+    "start_s": 120.6342,
+    "req_bytes": 71716,
+    "resp_bytes": 2860,
+    "ttfb_ms": 6955.543,
+    "stream_ms": 10.511,
+    "total_ms": 6966.054,
+    "rx_reads": 3,
+    "path": null
+   },
+   {
+    "n": 16,
+    "kind": "llm",
+    "conn": 48,
+    "endpoint": "generativelanguage.googleapis.com",
+    "start_s": 127.6577,
+    "req_bytes": 73059,
+    "resp_bytes": 3293,
+    "ttfb_ms": 6149.085,
+    "stream_ms": 147.747,
+    "total_ms": 6296.832,
+    "rx_reads": 5,
+    "path": null
+   }
+  ]
+ },
+ "roles": {
+  "other": {
+   "user_ns": 646386513,
+   "sys_ns": 27840376,
+   "runq_ns": 23961,
+   "sleep_ns": 937083463353,
+   "io_ns": 1020635,
+   "vcsw": 309,
+   "ivcsw": 2,
+   "syscalls": 11277,
+   "sys_errs": 1345,
+   "sys_wall_ns": 937112143921,
+   "inet_tx": 0,
+   "inet_rx": 0,
+   "unix_tx": 143,
+   "unix_rx": 113,
+   "file_rd": 17116542,
+   "file_wr": 0,
+   "other_rd": 10087,
+   "other_wr": 10095,
+   "opens": 131,
+   "open_fail": 53,
+   "forks": 12,
+   "processes": 1
+  },
+  "agent": {
+   "user_ns": 2256089263,
+   "sys_ns": 132569749,
+   "runq_ns": 608115,
+   "sleep_ns": 1463560355907,
+   "io_ns": 1958174,
+   "vcsw": 2365,
+   "ivcsw": 6,
+   "syscalls": 33462,
+   "sys_errs": 2486,
+   "sys_wall_ns": 1463694256738,
+   "inet_tx": 4491726,
+   "inet_rx": 183123,
+   "unix_tx": 47,
+   "unix_rx": 5581,
+   "file_rd": 24512814,
+   "file_wr": 48325,
+   "other_rd": 27773,
+   "other_wr": 31148,
+   "opens": 597,
+   "open_fail": 235,
+   "forks": 23,
+   "processes": 1
+  },
+  "tool": {
+   "user_ns": 2574799424,
+   "sys_ns": 165437993,
+   "runq_ns": 160748,
+   "sleep_ns": 9867920524,
+   "io_ns": 22669486,
+   "vcsw": 141,
+   "ivcsw": 8,
+   "syscalls": 62599,
+   "sys_errs": 7729,
+   "sys_wall_ns": 10055856285,
+   "inet_tx": 1319,
+   "inet_rx": 4978,
+   "unix_tx": 6081,
+   "unix_rx": 22648,
+   "file_rd": 47465371,
+   "file_wr": 15465350,
+   "other_rd": 102127,
+   "other_wr": 96066,
+   "opens": 5259,
+   "open_fail": 397,
+   "forks": 50,
+   "processes": 62
+  }
+ },
+ "syscalls": {
+  "tool": {
+   "total": 62599,
+   "distinct": 75,
+   "top": [
+    {
+     "name": "newfstatat",
+     "group": "file",
+     "count": 14490,
+     "total_ms": 21.228,
+     "avg_us": 1.47,
+     "max_ms": 0.058,
+     "errs": 2597
+    },
+    {
+     "name": "lseek",
+     "group": "file",
+     "count": 7953,
+     "total_ms": 1.705,
+     "avg_us": 0.21,
+     "max_ms": 0.055,
+     "errs": 29
+    },
+    {
+     "name": "fstat",
+     "group": "file",
+     "count": 6952,
+     "total_ms": 3.06,
+     "avg_us": 0.44,
+     "max_ms": 0.02,
+     "errs": 0
+    },
+    {
+     "name": "read",
+     "group": "file",
+     "count": 6045,
+     "total_ms": 2070.527,
+     "avg_us": 342.52,
+     "max_ms": 1145.864,
+     "errs": 2
+    },
+    {
+     "name": "openat",
+     "group": "file",
+     "count": 5259,
+     "total_ms": 25.55,
+     "avg_us": 4.86,
+     "max_ms": 0.104,
+     "errs": 397
+    },
+    {
+     "name": "close",
+     "group": "file",
+     "count": 5121,
+     "total_ms": 5.86,
+     "avg_us": 1.14,
+     "max_ms": 0.053,
+     "errs": 9
+    },
+    {
+     "name": "ioctl",
+     "group": "file",
+     "count": 3626,
+     "total_ms": 2.138,
+     "avg_us": 0.59,
+     "max_ms": 0.014,
+     "errs": 3613
+    },
+    {
+     "name": "mmap",
+     "group": "memory",
+     "count": 2828,
+     "total_ms": 6.72,
+     "avg_us": 2.38,
+     "max_ms": 0.064,
+     "errs": 0
+    },
+    {
+     "name": "rt_sigaction",
+     "group": "process",
+     "count": 1629,
+     "total_ms": 0.306,
+     "avg_us": 0.19,
+     "max_ms": 0.002,
+     "errs": 0
+    },
+    {
+     "name": "munmap",
+     "group": "memory",
+     "count": 1603,
+     "total_ms": 4.53,
+     "avg_us": 2.83,
+     "max_ms": 0.087,
+     "errs": 0
+    },
+    {
+     "name": "brk",
+     "group": "memory",
+     "count": 1203,
+     "total_ms": 6.14,
+     "avg_us": 5.1,
+     "max_ms": 0.26,
+     "errs": 0
+    },
+    {
+     "name": "write",
+     "group": "file",
+     "count": 1152,
+     "total_ms": 20.153,
+     "avg_us": 17.49,
+     "max_ms": 0.746,
+     "errs": 0
+    },
+    {
+     "name": "mkdir",
+     "group": "file",
+     "count": 1028,
+     "total_ms": 21.979,
+     "avg_us": 21.38,
+     "max_ms": 3.152,
+     "errs": 887
+    },
+    {
+     "name": "getdents64",
+     "group": "file",
+     "count": 650,
+     "total_ms": 3.894,
+     "avg_us": 5.99,
+     "max_ms": 0.073,
+     "errs": 0
+    },
+    {
+     "name": "rename",
+     "group": "file",
+     "count": 501,
+     "total_ms": 3.958,
+     "avg_us": 7.9,
+     "max_ms": 0.131,
+     "errs": 0
+    },
+    {
+     "name": "getcwd",
+     "group": "file",
+     "count": 367,
+     "total_ms": 0.436,
+     "avg_us": 1.19,
+     "max_ms": 0.06,
+     "errs": 0
+    },
+    {
+     "name": "mprotect",
+     "group": "memory",
+     "count": 243,
+     "total_ms": 0.934,
+     "avg_us": 3.84,
+     "max_ms": 0.016,
+     "errs": 0
+    },
+    {
+     "name": "rt_sigprocmask",
+     "group": "process",
+     "count": 197,
+     "total_ms": 0.073,
+     "avg_us": 0.37,
+     "max_ms": 0.003,
+     "errs": 0
+    },
+    {
+     "name": "fcntl",
+     "group": "file",
+     "count": 149,
+     "total_ms": 0.06,
+     "avg_us": 0.4,
+     "max_ms": 0.003,
+     "errs": 0
+    },
+    {
+     "name": "recvmsg",
+     "group": "network",
+     "count": 96,
+     "total_ms": 0.104,
+     "avg_us": 1.09,
+     "max_ms": 0.028,
+     "errs": 60
+    },
+    {
+     "name": "set_robust_list",
+     "group": "sync",
+     "count": 95,
+     "total_ms": 0.206,
+     "avg_us": 2.17,
+     "max_ms": 0.009,
+     "errs": 0
+    },
+    {
+     "name": "dup2",
+     "group": "file",
+     "count": 92,
+     "total_ms": 0.051,
+     "avg_us": 0.55,
+     "max_ms": 0.002,
+     "errs": 0
+    },
+    {
+     "name": "futex",
+     "group": "sync",
+     "count": 90,
+     "total_ms": 0.057,
+     "avg_us": 0.63,
+     "max_ms": 0.002,
+     "errs": 0
+    },
+    {
+     "name": "wait4",
+     "group": "process",
+     "count": 82,
+     "total_ms": 7702.138,
+     "avg_us": 93928.51,
+     "max_ms": 2064.016,
+     "errs": 32
+    },
+    {
+     "name": "getpid",
+     "group": "process",
+     "count": 80,
+     "total_ms": 0.038,
+     "avg_us": 0.47,
+     "max_ms": 0.001,
+     "errs": 0
+    }
+   ],
+   "groups": {
+    "file": {
+     "count": 53703,
+     "total_ms": 2200.149
+    },
+    "memory": {
+     "count": 5884,
+     "total_ms": 18.419
+    },
+    "process": {
+     "count": 2533,
+     "total_ms": 7720.66
+    },
+    "network": {
+     "count": 169,
+     "total_ms": 0.988
+    },
+    "sync": {
+     "count": 225,
+     "total_ms": 0.28
+    },
+    "wait/poll": {
+     "count": 85,
+     "total_ms": 115.36
+    }
+   }
+  },
+  "agent": {
+   "total": 33462,
+   "distinct": 74,
+   "top": [
+    {
+     "name": "futex",
+     "group": "sync",
+     "count": 8737,
+     "total_ms": 1197802.177,
+     "avg_us": 137095.36,
+     "max_ms": 133488.265,
+     "errs": 1473
+    },
+    {
+     "name": "epoll_pwait",
+     "group": "wait/poll",
+     "count": 4835,
+     "total_ms": 265486.322,
+     "avg_us": 54909.27,
+     "max_ms": 59529.772,
+     "errs": 0
+    },
+    {
+     "name": "read",
+     "group": "file",
+     "count": 4073,
+     "total_ms": 26.103,
+     "avg_us": 6.41,
+     "max_ms": 6.453,
+     "errs": 0
+    },
+    {
+     "name": "write",
+     "group": "file",
+     "count": 3697,
+     "total_ms": 9.305,
+     "avg_us": 2.52,
+     "max_ms": 0.202,
+     "errs": 16
+    },
+    {
+     "name": "mprotect",
+     "group": "memory",
+     "count": 2906,
+     "total_ms": 3.57,
+     "avg_us": 1.23,
+     "max_ms": 0.155,
+     "errs": 0
+    },
+    {
+     "name": "connect",
+     "group": "network",
+     "count": 1130,
+     "total_ms": 4.7,
+     "avg_us": 4.16,
+     "max_ms": 0.166,
+     "errs": 316
+    },
+    {
+     "name": "statx",
+     "group": "file",
+     "count": 1024,
+     "total_ms": 1.702,
+     "avg_us": 1.66,
+     "max_ms": 0.027,
+     "errs": 171
+    },
+    {
+     "name": "madvise",
+     "group": "memory",
+     "count": 743,
+     "total_ms": 5.802,
+     "avg_us": 7.81,
+     "max_ms": 1.75,
+     "errs": 0
+    },
+    {
+     "name": "munmap",
+     "group": "memory",
+     "count": 718,
+     "total_ms": 6.861,
+     "avg_us": 9.56,
+     "max_ms": 0.814,
+     "errs": 0
+    },
+    {
+     "name": "close",
+     "group": "file",
+     "count": 625,
+     "total_ms": 5.142,
+     "avg_us": 8.23,
+     "max_ms": 0.131,
+     "errs": 0
+    },
+    {
+     "name": "openat",
+     "group": "file",
+     "count": 597,
+     "total_ms": 2.875,
+     "avg_us": 4.82,
+     "max_ms": 0.049,
+     "errs": 235
+    },
+    {
+     "name": "mmap",
+     "group": "memory",
+     "count": 577,
+     "total_ms": 3.783,
+     "avg_us": 6.56,
+     "max_ms": 0.15,
+     "errs": 0
+    },
+    {
+     "name": "getpid",
+     "group": "process",
+     "count": 551,
+     "total_ms": 0.256,
+     "avg_us": 0.46,
+     "max_ms": 0.008,
+     "errs": 0
+    },
+    {
+     "name": "setsockopt",
+     "group": "network",
+     "count": 495,
+     "total_ms": 0.404,
+     "avg_us": 0.82,
+     "max_ms": 0.021,
+     "errs": 0
+    },
+    {
+     "name": "getsockname",
+     "group": "network",
+     "count": 315,
+     "total_ms": 0.118,
+     "avg_us": 0.38,
+     "max_ms": 0.002,
+     "errs": 0
+    },
+    {
+     "name": "access",
+     "group": "file",
+     "count": 288,
+     "total_ms": 0.953,
+     "avg_us": 3.31,
+     "max_ms": 0.064,
+     "errs": 133
+    },
+    {
+     "name": "brk",
+     "group": "memory",
+     "count": 182,
+     "total_ms": 0.446,
+     "avg_us": 2.45,
+     "max_ms": 0.063,
+     "errs": 0
+    },
+    {
+     "name": "socket",
+     "group": "network",
+     "count": 167,
+     "total_ms": 2.193,
+     "avg_us": 13.13,
+     "max_ms": 0.12,
+     "errs": 0
+    },
+    {
+     "name": "rt_sigprocmask",
+     "group": "process",
+     "count": 155,
+     "total_ms": 0.056,
+     "avg_us": 0.36,
+     "max_ms": 0.002,
+     "errs": 0
+    },
+    {
+     "name": "io_uring_enter",
+     "group": "wait/poll",
+     "count": 147,
+     "total_ms": 0.774,
+     "avg_us": 5.27,
+     "max_ms": 0.056,
+     "errs": 0
+    },
+    {
+     "name": "ioctl",
+     "group": "file",
+     "count": 117,
+     "total_ms": 0.269,
+     "avg_us": 2.3,
+     "max_ms": 0.006,
+     "errs": 16
+    },
+    {
+     "name": "mkdir",
+     "group": "file",
+     "count": 106,
+     "total_ms": 3.846,
+     "avg_us": 36.29,
+     "max_ms": 0.378,
+     "errs": 93
+    },
+    {
+     "name": "poll",
+     "group": "wait/poll",
+     "count": 105,
+     "total_ms": 306.597,
+     "avg_us": 2919.98,
+     "max_ms": 21.269,
+     "errs": 0
+    },
+    {
+     "name": "rt_sigaction",
+     "group": "process",
+     "count": 102,
+     "total_ms": 0.042,
+     "avg_us": 0.41,
+     "max_ms": 0.002,
+     "errs": 0
+    },
+    {
+     "name": "fstat",
+     "group": "file",
+     "count": 94,
+     "total_ms": 0.08,
+     "avg_us": 0.85,
+     "max_ms": 0.004,
+     "errs": 0
+    }
+   ],
+   "groups": {
+    "sync": {
+     "count": 8762,
+     "total_ms": 1197802.208
+    },
+    "wait/poll": {
+     "count": 5156,
+     "total_ms": 265794.108
+    },
+    "file": {
+     "count": 10884,
+     "total_ms": 54.218
+    },
+    "memory": {
+     "count": 5126,
+     "total_ms": 20.462
+    },
+    "network": {
+     "count": 2440,
+     "total_ms": 11.936
+    },
+    "process": {
+     "count": 1091,
+     "total_ms": 11.148
+    },
+    "other": {
+     "count": 3,
+     "total_ms": 0.175
+    }
+   }
+  },
+  "other": {
+   "total": 11277,
+   "distinct": 69,
+   "top": [
+    {
+     "name": "futex",
+     "group": "sync",
+     "count": 4336,
+     "total_ms": 669637.199,
+     "avg_us": 154436.62,
+     "max_ms": 133952.346,
+     "errs": 1186
+    },
+    {
+     "name": "read",
+     "group": "file",
+     "count": 1329,
+     "total_ms": 25.484,
+     "avg_us": 19.18,
+     "max_ms": 17.377,
+     "errs": 0
+    },
+    {
+     "name": "epoll_pwait",
+     "group": "wait/poll",
+     "count": 1282,
+     "total_ms": 267436.112,
+     "avg_us": 208608.51,
+     "max_ms": 124766.742,
+     "errs": 0
+    },
+    {
+     "name": "write",
+     "group": "file",
+     "count": 1281,
+     "total_ms": 0.415,
+     "avg_us": 0.32,
+     "max_ms": 0.024,
+     "errs": 0
+    },
+    {
+     "name": "mprotect",
+     "group": "memory",
+     "count": 685,
+     "total_ms": 1.213,
+     "avg_us": 1.77,
+     "max_ms": 0.268,
+     "errs": 0
+    },
+    {
+     "name": "munmap",
+     "group": "memory",
+     "count": 489,
+     "total_ms": 4.25,
+     "avg_us": 8.69,
+     "max_ms": 0.734,
+     "errs": 0
+    },
+    {
+     "name": "mmap",
+     "group": "memory",
+     "count": 410,
+     "total_ms": 2.012,
+     "avg_us": 4.91,
+     "max_ms": 0.272,
+     "errs": 0
+    },
+    {
+     "name": "madvise",
+     "group": "memory",
+     "count": 377,
+     "total_ms": 0.952,
+     "avg_us": 2.53,
+     "max_ms": 0.098,
+     "errs": 0
+    },
+    {
+     "name": "brk",
+     "group": "memory",
+     "count": 181,
+     "total_ms": 0.599,
+     "avg_us": 3.31,
+     "max_ms": 0.095,
+     "errs": 0
+    },
+    {
+     "name": "statx",
+     "group": "file",
+     "count": 145,
+     "total_ms": 0.251,
+     "avg_us": 1.73,
+     "max_ms": 0.015,
+     "errs": 66
+    },
+    {
+     "name": "openat",
+     "group": "file",
+     "count": 131,
+     "total_ms": 0.501,
+     "avg_us": 3.82,
+     "max_ms": 0.101,
+     "errs": 53
+    },
+    {
+     "name": "close",
+     "group": "file",
+     "count": 99,
+     "total_ms": 0.206,
+     "avg_us": 2.09,
+     "max_ms": 0.017,
+     "errs": 0
+    },
+    {
+     "name": "rt_sigprocmask",
+     "group": "process",
+     "count": 94,
+     "total_ms": 0.031,
+     "avg_us": 0.33,
+     "max_ms": 0.002,
+     "errs": 0
+    },
+    {
+     "name": "fstat",
+     "group": "file",
+     "count": 66,
+     "total_ms": 0.041,
+     "avg_us": 0.62,
+     "max_ms": 0.004,
+     "errs": 0
+    },
+    {
+     "name": "rt_sigaction",
+     "group": "process",
+     "count": 53,
+     "total_ms": 0.012,
+     "avg_us": 0.22,
+     "max_ms": 0.002,
+     "errs": 0
+    },
+    {
+     "name": "getpid",
+     "group": "process",
+     "count": 40,
+     "total_ms": 0.027,
+     "avg_us": 0.68,
+     "max_ms": 0.003,
+     "errs": 0
+    },
+    {
+     "name": "fcntl",
+     "group": "file",
+     "count": 23,
+     "total_ms": 0.004,
+     "avg_us": 0.16,
+     "max_ms": 0.001,
+     "errs": 14
+    },
+    {
+     "name": "capget",
+     "group": "process",
+     "count": 15,
+     "total_ms": 0.008,
+     "avg_us": 0.53,
+     "max_ms": 0.002,
+     "errs": 0
+    },
+    {
+     "name": "getegid",
+     "group": "process",
+     "count": 15,
+     "total_ms": 0.002,
+     "avg_us": 0.1,
+     "max_ms": 0.0,
+     "errs": 0
+    },
+    {
+     "name": "getuid",
+     "group": "process",
+     "count": 15,
+     "total_ms": 0.003,
+     "avg_us": 0.18,
+     "max_ms": 0.0,
+     "errs": 0
+    },
+    {
+     "name": "geteuid",
+     "group": "process",
+     "count": 15,
+     "total_ms": 0.002,
+     "avg_us": 0.13,
+     "max_ms": 0.0,
+     "errs": 0
+    },
+    {
+     "name": "getgid",
+     "group": "process",
+     "count": 15,
+     "total_ms": 0.002,
+     "avg_us": 0.13,
+     "max_ms": 0.0,
+     "errs": 0
+    },
+    {
+     "name": "set_robust_list",
+     "group": "sync",
+     "count": 13,
+     "total_ms": 0.005,
+     "avg_us": 0.35,
+     "max_ms": 0.001,
+     "errs": 0
+    },
+    {
+     "name": "rseq",
+     "group": "sync",
+     "count": 13,
+     "total_ms": 0.019,
+     "avg_us": 1.48,
+     "max_ms": 0.003,
+     "errs": 0
+    },
+    {
+     "name": "ioctl",
+     "group": "file",
+     "count": 12,
+     "total_ms": 0.026,
+     "avg_us": 2.16,
+     "max_ms": 0.006,
+     "errs": 11
+    }
+   ],
+   "groups": {
+    "sync": {
+     "count": 4362,
+     "total_ms": 669637.223
+    },
+    "file": {
+     "count": 3115,
+     "total_ms": 26.995
+    },
+    "wait/poll": {
+     "count": 1306,
+     "total_ms": 267436.275
+    },
+    "memory": {
+     "count": 2142,
+     "total_ms": 9.026
+    },
+    "process": {
+     "count": 333,
+     "total_ms": 2.432
+    },
+    "network": {
+     "count": 16,
+     "total_ms": 0.123
+    },
+    "other": {
+     "count": 3,
+     "total_ms": 0.072
+    }
+   }
+  }
+ },
+ "syscall_hist": {
+  "getgroups": {
+   "7": 1,
+   "8": 1
+  },
+  "futex": {
+   "22": 77,
+   "23": 96,
+   "21": 49,
+   "24": 40,
+   "33": 33,
+   "18": 148,
+   "10": 401,
+   "31": 9,
+   "8": 4212,
+   "34": 4,
+   "15": 235,
+   "20": 79,
+   "25": 51,
+   "32": 102,
+   "35": 5,
+   "13": 1016,
+   "36": 4,
+   "30": 5,
+   "27": 16,
+   "29": 17,
+   "9": 1448,
+   "17": 246,
+   "16": 215,
+   "6": 149,
+   "14": 728,
+   "11": 66,
+   "12": 49,
+   "26": 5,
+   "7": 3516,
+   "28": 33,
+   "19": 109
+  },
+  "brk": {
+   "17": 2,
+   "16": 12,
+   "13": 60,
+   "10": 345,
+   "9": 325,
+   "14": 16,
+   "12": 145,
+   "11": 302,
+   "7": 37,
+   "15": 46,
+   "8": 276
+  },
+  "epoll_ctl": {
+   "13": 30,
+   "9": 9,
+   "10": 7,
+   "14": 1,
+   "11": 9,
+   "8": 6,
+   "12": 8
+  },
+  "mmap": {
+   "17": 2,
+   "18": 1,
+   "9": 342,
+   "11": 718,
+   "15": 10,
+   "14": 44,
+   "10": 1917,
+   "13": 192,
+   "12": 585,
+   "8": 2,
+   "16": 2
+  },
+  "socketpair": {
+   "10": 4,
+   "11": 14,
+   "13": 9,
+   "15": 1,
+   "12": 1,
+   "14": 2
+  },
+  "rt_sigreturn": {
+   "14": 1,
+   "9": 43,
+   "10": 6,
+   "8": 7
+  },
+  "pread64": {
+   "9": 1,
+   "13": 1,
+   "11": 4,
+   "8": 50,
+   "15": 1,
+   "7": 39
+  },
+  "getegid": {
+   "7": 32,
+   "8": 1,
+   "6": 45
+  },
+  "poll": {
+   "15": 10,
+   "10": 16,
+   "16": 2,
+   "19": 9,
+   "24": 4,
+   "14": 24,
+   "7": 23,
+   "22": 15,
+   "20": 3,
+   "25": 1,
+   "8": 10,
+   "23": 12,
+   "21": 9,
+   "9": 24,
+   "18": 22
+  },
+  "recvfrom": {
+   "12": 4,
+   "11": 3,
+   "15": 9,
+   "13": 11,
+   "10": 3,
+   "14": 50
+  },
+  "geteuid": {
+   "6": 31,
+   "9": 4,
+   "8": 6,
+   "7": 45
+  },
+  "fcntl": {
+   "9": 34,
+   "7": 76,
+   "11": 1,
+   "8": 47,
+   "6": 38,
+   "10": 8
+  },
+  "readlink": {
+   "11": 16,
+   "10": 11,
+   "14": 1,
+   "13": 1,
+   "9": 10,
+   "8": 13
+  },
+  "newfstatat": {
+   "10": 5237,
+   "11": 1755,
+   "7": 1,
+   "8": 1173,
+   "15": 5,
+   "13": 90,
+   "9": 5702,
+   "14": 16,
+   "12": 584
+  },
+  "getgid": {
+   "7": 37,
+   "6": 35,
+   "8": 6
+  },
+  "utimensat": {
+   "13": 1
+  },
+  "connect": {
+   "7": 31,
+   "15": 10,
+   "10": 317,
+   "17": 3,
+   "9": 220,
+   "14": 15,
+   "13": 54,
+   "11": 14,
+   "12": 47,
+   "16": 20,
+   "8": 424
+  },
+  "write": {
+   "8": 1607,
+   "11": 153,
+   "16": 58,
+   "14": 152,
+   "19": 1,
+   "12": 500,
+   "10": 155,
+   "7": 2396,
+   "15": 175,
+   "17": 8,
+   "9": 336,
+   "13": 589
+  },
+  "socket": {
+   "10": 2,
+   "13": 59,
+   "9": 3,
+   "14": 26,
+   "12": 62,
+   "11": 20,
+   "16": 4,
+   "15": 8
+  },
+  "eventfd2": {
+   "9": 2,
+   "10": 4
+  },
+  "madvise": {
+   "18": 3,
+   "10": 221,
+   "9": 150,
+   "13": 47,
+   "12": 175,
+   "8": 334,
+   "16": 8,
+   "20": 1,
+   "11": 160,
+   "14": 10,
+   "7": 6,
+   "15": 4,
+   "17": 1
+  },
+  "getsockopt": {
+   "9": 1,
+   "11": 22,
+   "12": 3,
+   "10": 12
+  },
+  "lseek": {
+   "9": 133,
+   "15": 1,
+   "10": 23,
+   "7": 4061,
+   "13": 1,
+   "6": 1755,
+   "8": 2024
+  },
+  "gettid": {
+   "8": 5,
+   "6": 4,
+   "10": 2,
+   "9": 9
+  },
+  "munmap": {
+   "15": 22,
+   "14": 124,
+   "19": 2,
+   "16": 3,
+   "12": 429,
+   "10": 1382,
+   "13": 328,
+   "9": 115,
+   "11": 403,
+   "17": 2
+  },
+  "epoll_pwait": {
+   "35": 4,
+   "18": 3,
+   "27": 59,
+   "15": 92,
+   "29": 2,
+   "20": 8,
+   "12": 55,
+   "13": 14,
+   "19": 3,
+   "28": 250,
+   "14": 126,
+   "24": 37,
+   "25": 32,
+   "33": 4,
+   "32": 3,
+   "17": 6,
+   "9": 418,
+   "21": 25,
+   "8": 2008,
+   "11": 335,
+   "26": 36,
+   "7": 2289,
+   "23": 49,
+   "16": 34,
+   "30": 1,
+   "10": 193,
+   "22": 30,
+   "36": 1
+  },
+  "openat": {
+   "13": 646,
+   "12": 1174,
+   "8": 75,
+   "9": 478,
+   "11": 2496,
+   "16": 6,
+   "10": 914,
+   "15": 35,
+   "14": 163
+  },
+  "uname": {
+   "10": 16,
+   "11": 8,
+   "9": 8
+  },
+  "rt_sigaction": {
+   "6": 582,
+   "8": 159,
+   "10": 25,
+   "11": 6,
+   "9": 45,
+   "7": 967
+  },
+  "capget": {
+   "12": 1,
+   "11": 5,
+   "13": 1,
+   "10": 6,
+   "8": 7,
+   "9": 4,
+   "7": 27
+  },
+  "chmod": {
+   "12": 1,
+   "11": 4,
+   "13": 3,
+   "10": 5
+  },
+  "epoll_pwait2": {
+   "8": 2,
+   "7": 1,
+   "10": 1
+  },
+  "execve": {
+   "19": 7,
+   "11": 6,
+   "10": 11,
+   "15": 1,
+   "18": 6,
+   "14": 5,
+   "17": 17,
+   "12": 1,
+   "20": 1,
+   "16": 12
+  },
+  "rename": {
+   "15": 2,
+   "14": 9,
+   "12": 410,
+   "13": 80,
+   "17": 1,
+   "16": 1
+  },
+  "mremap": {
+   "14": 1,
+   "12": 1,
+   "11": 1,
+   "15": 1,
+   "10": 2,
+   "13": 1
+  },
+  "getpeername": {
+   "9": 3,
+   "8": 6
+  },
+  "recvmsg": {
+   "8": 48,
+   "9": 24,
+   "12": 25,
+   "10": 41,
+   "11": 4,
+   "15": 1,
+   "14": 1,
+   "13": 13,
+   "7": 11
+  },
+  "close": {
+   "14": 9,
+   "9": 2430,
+   "13": 81,
+   "12": 95,
+   "17": 1,
+   "11": 384,
+   "10": 2244,
+   "7": 348,
+   "8": 217,
+   "15": 4,
+   "16": 32
+  },
+  "ioctl": {
+   "8": 1465,
+   "7": 183,
+   "10": 195,
+   "12": 24,
+   "9": 1805,
+   "6": 6,
+   "11": 76,
+   "13": 1
+  },
+  "rt_sigprocmask": {
+   "8": 131,
+   "10": 8,
+   "6": 19,
+   "9": 70,
+   "11": 4,
+   "7": 214
+  },
+  "mkdir": {
+   "14": 3,
+   "16": 100,
+   "11": 54,
+   "18": 8,
+   "12": 45,
+   "9": 396,
+   "17": 45,
+   "10": 477,
+   "13": 4,
+   "20": 1,
+   "21": 1
+  },
+  "writev": {
+   "13": 29,
+   "14": 5,
+   "15": 15,
+   "16": 21,
+   "12": 2
+  },
+  "setsockopt": {
+   "9": 61,
+   "7": 204,
+   "11": 50,
+   "14": 1,
+   "8": 87,
+   "12": 1,
+   "10": 98
+  },
+  "arch_prctl": {
+   "7": 6,
+   "9": 2,
+   "8": 35
+  },
+  "vfork": {
+   "17": 4,
+   "18": 3
+  },
+  "prctl": {
+   "11": 1,
+   "6": 5,
+   "10": 1,
+   "13": 4,
+   "12": 2,
+   "14": 3
+  },
+  "read": {
+   "23": 2,
+   "19": 25,
+   "13": 226,
+   "24": 1,
+   "17": 4,
+   "12": 660,
+   "9": 740,
+   "16": 27,
+   "25": 1,
+   "15": 119,
+   "14": 163,
+   "10": 1389,
+   "22": 4,
+   "18": 6,
+   "29": 1,
+   "11": 1422,
+   "8": 1966,
+   "30": 1,
+   "7": 4687,
+   "20": 3
+  },
+  "epoll_create1": {
+   "11": 7,
+   "12": 5,
+   "10": 1
+  },
+  "clone": {
+   "16": 30,
+   "19": 12,
+   "17": 3,
+   "20": 1,
+   "15": 10
+  },
+  "set_robust_list": {
+   "9": 3,
+   "12": 18,
+   "10": 13,
+   "11": 24,
+   "8": 13,
+   "7": 48,
+   "13": 2
+  },
+  "getuid": {
+   "9": 11,
+   "6": 29,
+   "8": 18,
+   "7": 20
+  },
+  "getppid": {
+   "9": 3,
+   "6": 10,
+   "7": 3,
+   "8": 11,
+   "10": 6
+  },
+  "getdents64": {
+   "13": 94,
+   "16": 1,
+   "7": 247,
+   "14": 31,
+   "12": 127,
+   "8": 81,
+   "10": 21,
+   "15": 28,
+   "11": 30,
+   "9": 10
+  },
+  "access": {
+   "14": 1,
+   "13": 9,
+   "10": 97,
+   "12": 53,
+   "11": 136,
+   "8": 8,
+   "15": 1,
+   "9": 43
+  },
+  "mprotect": {
+   "7": 18,
+   "18": 1,
+   "8": 1360,
+   "13": 60,
+   "10": 528,
+   "17": 1,
+   "16": 2,
+   "12": 161,
+   "14": 6,
+   "11": 369,
+   "9": 1325,
+   "15": 3
+  },
+  "statx": {
+   "10": 283,
+   "12": 46,
+   "9": 465,
+   "13": 33,
+   "11": 118,
+   "14": 6,
+   "8": 218
+  },
+  "unlink": {
+   "14": 8,
+   "15": 1
+  },
+  "getrusage": {
+   "11": 10,
+   "12": 1,
+   "10": 4,
+   "8": 1,
+   "9": 2
+  },
+  "getrandom": {
+   "12": 12,
+   "8": 5,
+   "11": 1,
+   "9": 43,
+   "10": 8
+  },
+  "bind": {
+   "11": 25,
+   "16": 1,
+   "12": 11,
+   "15": 2
+  },
+  "chdir": {
+   "11": 6,
+   "12": 4
+  },
+  "prlimit64": {
+   "8": 31,
+   "7": 7,
+   "10": 11,
+   "9": 17
+  },
+  "rseq": {
+   "8": 27,
+   "9": 18,
+   "7": 1,
+   "11": 2,
+   "10": 17
+  },
+  "getpid": {
+   "6": 203,
+   "10": 99,
+   "13": 1,
+   "8": 61,
+   "11": 9,
+   "9": 105,
+   "7": 193
+  },
+  "setsid": {
+   "14": 6,
+   "13": 1
+  },
+  "pipe2": {
+   "15": 1,
+   "10": 5,
+   "12": 26,
+   "11": 27,
+   "13": 7,
+   "9": 1
+  },
+  "wait4": {
+   "27": 2,
+   "18": 1,
+   "8": 14,
+   "20": 1,
+   "23": 2,
+   "21": 2,
+   "12": 2,
+   "25": 2,
+   "11": 10,
+   "28": 2,
+   "19": 8,
+   "14": 7,
+   "16": 3,
+   "13": 11,
+   "9": 5,
+   "15": 7,
+   "7": 13,
+   "30": 3
+  },
+  "dup2": {
+   "10": 11,
+   "8": 37,
+   "7": 15,
+   "9": 32,
+   "11": 1
+  },
+  "clone3": {
+   "14": 3,
+   "15": 11,
+   "16": 8
+  },
+  "rmdir": {
+   "13": 6,
+   "15": 1,
+   "12": 2,
+   "14": 11
+  },
+  "symlink": {
+   "11": 2,
+   "12": 2
+  },
+  "io_uring_enter": {
+   "13": 22,
+   "15": 2,
+   "10": 4,
+   "9": 20,
+   "8": 12,
+   "14": 1,
+   "11": 23,
+   "12": 66
+  },
+  "shutdown": {
+   "9": 9,
+   "13": 1,
+   "11": 8,
+   "10": 7
+  },
+  "io_uring_setup": {
+   "16": 1,
+   "14": 2,
+   "13": 1,
+   "15": 2
+  },
+  "getcwd": {
+   "10": 89,
+   "12": 3,
+   "8": 165,
+   "9": 72,
+   "13": 2,
+   "15": 1,
+   "11": 38
+  },
+  "sched_getaffinity": {
+   "11": 2,
+   "12": 2,
+   "10": 4
+  },
+  "set_tid_address": {
+   "8": 30,
+   "9": 13
+  },
+  "setuid": {
+   "11": 1
+  },
+  "fstat": {
+   "7": 2378,
+   "9": 1608,
+   "14": 1,
+   "12": 2,
+   "11": 38,
+   "13": 3,
+   "8": 2899,
+   "10": 183
+  },
+  "dup": {
+   "8": 2,
+   "7": 2
+  },
+  "sigaltstack": {
+   "9": 2
+  },
+  "umask": {
+   "8": 2,
+   "6": 2
+  },
+  "fsync": {
+   "22": 1,
+   "21": 4
+  },
+  "sendto": {
+   "14": 26,
+   "13": 11
+  },
+  "getsockname": {
+   "7": 206,
+   "11": 1,
+   "10": 24,
+   "9": 46,
+   "8": 44
+  },
+  "unlinkat": {
+   "16": 1,
+   "13": 2,
+   "14": 1
+  },
+  "sendmmsg": {
+   "14": 9,
+   "17": 1,
+   "15": 25,
+   "16": 1
+  },
+  "setgroups": {
+   "12": 1
+  },
+  "close_range": {
+   "7": 4,
+   "9": 5,
+   "8": 3
+  },
+  "getpgrp": {
+   "9": 1,
+   "7": 1,
+   "8": 5
+  },
+  "timerfd_settime": {
+   "10": 1
+  },
+  "epoll_wait": {
+   "15": 1
+  },
+  "fadvise64": {
+   "8": 5,
+   "9": 5
+  },
+  "timerfd_create": {
+   "10": 1
+  },
+  "setgid": {
+   "14": 1
+  }
+ },
+ "memory": {
+  "source": "cgroup memory.current",
+  "peak_bytes": 369147904,
+  "avg_bytes": 304947706,
+  "peak_to_avg": 1.21,
+  "agent_main_hwm_kb": 280120,
+  "cgroup_final": {
+   "memory.current": 22081536,
+   "memory.peak": 377724928,
+   "memory.stat": {
+    "anon": 0,
+    "file": 16793600,
+    "kernel": 2449408,
+    "kernel_stack": 0,
+    "pagetables": 0,
+    "sec_pagetables": 0,
+    "percpu": 0,
+    "sock": 0,
+    "vmalloc": 0,
+    "shmem": 0,
+    "file_mapped": 0,
+    "file_dirty": 24576,
+    "file_writeback": 0,
+    "swapcached": 0,
+    "anon_thp": 0,
+    "file_thp": 0,
+    "shmem_thp": 0,
+    "inactive_anon": 0,
+    "active_anon": 0,
+    "inactive_file": 15630336,
+    "active_file": 1163264,
+    "unevictable": 0,
+    "slab_reclaimable": 2418088,
+    "slab_unreclaimable": 30912,
+    "slab": 2449000,
+    "workingset_refault_anon": 0,
+    "workingset_refault_file": 0,
+    "workingset_activate_anon": 0,
+    "workingset_activate_file": 0,
+    "workingset_restore_anon": 0,
+    "workingset_restore_file": 0,
+    "workingset_nodereclaim": 0,
+    "pgdemote_kswapd": 0,
+    "pgdemote_direct": 0,
+    "pgdemote_khugepaged": 0,
+    "pgdemote_proactive": 0,
+    "pgscan": 0,
+    "pgsteal": 0,
+    "pswpin": 0,
+    "pswpout": 0,
+    "pgscan_kswapd": 0,
+    "pgscan_direct": 0,
+    "pgscan_khugepaged": 0,
+    "pgscan_proactive": 0,
+    "pgsteal_kswapd": 0,
+    "pgsteal_direct": 0,
+    "pgsteal_khugepaged": 0,
+    "pgsteal_proactive": 0,
+    "pgfault": 224303,
+    "pgmajfault": 0,
+    "pgrefill": 0,
+    "pgactivate": 526,
+    "pgdeactivate": 0,
+    "pglazyfree": 0,
+    "pglazyfreed": 0,
+    "swpin_zero": 0,
+    "swpout_zero": 0,
+    "thp_fault_alloc": 0,
+    "thp_collapse_alloc": 0,
+    "thp_swpout": 0,
+    "thp_swpout_fallback": 0
+   },
+   "cpu.stat": {
+    "usage_usec": 5834236,
+    "user_usec": 5073774,
+    "system_usec": 760462,
+    "nice_usec": 0,
+    "nr_periods": 0,
+    "nr_throttled": 0,
+    "throttled_usec": 0,
+    "nr_bursts": 0,
+    "burst_usec": 0
+   },
+   "io.stat": "8:48 rbytes=98304 wbytes=15921152 rios=24 wios=1018 dbytes=0 dios=0",
+   "pids.current": 0,
+   "pids.peak": 28,
+   "memory.events": {
+    "low": 0,
+    "high": 0,
+    "max": 0,
+    "oom": 0,
+    "oom_kill": 0,
+    "oom_group_kill": 0
+   },
+   "cpu.pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=2894\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=2894",
+   "memory.pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=0\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=0",
+   "io.pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=6360\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=6360"
+  },
+  "note": "200 ms sampling: processes shorter than that may be missed; cgroup memory.peak is exact"
+ },
+ "network": {
+  "by_category": {
+   "dns": {
+    "connections": 15,
+    "tx": 3006,
+    "rx": 15502,
+    "exchanges": 15
+   },
+   "telemetry": {
+    "connections": 21,
+    "tx": 3456046,
+    "rx": 85766,
+    "exchanges": 22
+   },
+   "llm": {
+    "connections": 13,
+    "tx": 1032726,
+    "rx": 82083,
+    "exchanges": 17
+   },
+   "package": {
+    "connections": 1,
+    "tx": 1267,
+    "rx": 4750,
+    "exchanges": 1
+   }
+  },
+  "connections": [
+   {
+    "id": 0,
+    "name": "10.255.255.254:53",
+    "category": "dns",
+    "proto": "udp",
+    "remote": "10.255.255.254:53",
+    "local_port": 0,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": false,
+    "alpn": [],
+    "tx": 74,
+    "rx": 426,
+    "start_s": 1.3145,
+    "life_s": 133.053,
+    "tcp_handshake_ms": null,
+    "tls_handshake_ms": null,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 1,
+    "name": "play.googleapis.com",
+    "category": "telemetry",
+    "proto": "tcp",
+    "remote": "172.217.112.4:443",
+    "local_port": 54028,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": true,
+    "alpn": [],
+    "tx": 26479,
+    "rx": 7383,
+    "start_s": 1.3459,
+    "life_s": 4.273,
+    "tcp_handshake_ms": 11.417,
+    "tls_handshake_ms": 16.029,
+    "exchanges": 2,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 2,
+    "name": "10.255.255.254:53",
+    "category": "dns",
+    "proto": "udp",
+    "remote": "10.255.255.254:53",
+    "local_port": 0,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": false,
+    "alpn": [],
+    "tx": 102,
+    "rx": 454,
+    "start_s": 1.3869,
+    "life_s": 132.981,
+    "tcp_handshake_ms": null,
+    "tls_handshake_ms": null,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 3,
+    "name": "generativelanguage.googleapis.com",
+    "category": "llm",
+    "proto": "tcp",
+    "remote": "172.217.112.4:443",
+    "local_port": 54036,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": true,
+    "alpn": [],
+    "tx": 46866,
+    "rx": 10005,
+    "start_s": 1.4052,
+    "life_s": 11.084,
+    "tcp_handshake_ms": 12.228,
+    "tls_handshake_ms": 15.481,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 4,
+    "name": "10.255.255.254:53",
+    "category": "dns",
+    "proto": "udp",
+    "remote": "10.255.255.254:53",
+    "local_port": 0,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": false,
+    "alpn": [],
+    "tx": 454,
+    "rx": 2214,
+    "start_s": 8.4763,
+    "life_s": 125.891,
+    "tcp_handshake_ms": null,
+    "tls_handshake_ms": null,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 5,
+    "name": "generativelanguage.googleapis.com",
+    "category": "llm",
+    "proto": "tcp",
+    "remote": "172.217.114.4:443",
+    "local_port": 53120,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": true,
+    "alpn": [],
+    "tx": 50761,
+    "rx": 3724,
+    "start_s": 8.5194,
+    "life_s": 9.858,
+    "tcp_handshake_ms": 21.183,
+    "tls_handshake_ms": 17.486,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 6,
+    "name": "10.255.255.254:53",
+    "category": "dns",
+    "proto": "udp",
+    "remote": "10.255.255.254:53",
+    "local_port": 0,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": false,
+    "alpn": [],
+    "tx": 250,
+    "rx": 1306,
+    "start_s": 14.3744,
+    "life_s": 119.993,
+    "tcp_handshake_ms": null,
+    "tls_handshake_ms": null,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 7,
+    "name": "generativelanguage.googleapis.com",
+    "category": "llm",
+    "proto": "tcp",
+    "remote": "172.217.114.4:443",
+    "local_port": 47932,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": true,
+    "alpn": [],
+    "tx": 51405,
+    "rx": 6031,
+    "start_s": 14.3951,
+    "life_s": 17.775,
+    "tcp_handshake_ms": 12.378,
+    "tls_handshake_ms": 17.007,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 8,
+    "name": "generativelanguage.googleapis.com",
+    "category": "llm",
+    "proto": "tcp",
+    "remote": "172.217.117.4:443",
+    "local_port": 51768,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": true,
+    "alpn": [],
+    "tx": 53586,
+    "rx": 4676,
+    "start_s": 28.1796,
+    "life_s": 11.994,
+    "tcp_handshake_ms": 12.486,
+    "tls_handshake_ms": 16.474,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 9,
+    "name": "10.255.255.254:53",
+    "category": "dns",
+    "proto": "udp",
+    "remote": "10.255.255.254:53",
+    "local_port": 0,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": false,
+    "alpn": [],
+    "tx": 278,
+    "rx": 1334,
+    "start_s": 36.1684,
+    "life_s": 98.199,
+    "tcp_handshake_ms": null,
+    "tls_handshake_ms": null,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 10,
+    "name": "generativelanguage.googleapis.com",
+    "category": "llm",
+    "proto": "tcp",
+    "remote": "172.217.113.4:443",
+    "local_port": 52028,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": true,
+    "alpn": [],
+    "tx": 165235,
+    "rx": 9806,
+    "start_s": 36.1871,
+    "life_s": 31.853,
+    "tcp_handshake_ms": 13.363,
+    "tls_handshake_ms": 69.818,
+    "exchanges": 3,
+    "retrans": 1,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 11,
+    "name": "10.255.255.254:53",
+    "category": "dns",
+    "proto": "udp",
+    "remote": "10.255.255.254:53",
+    "local_port": 0,
+    "owner": 23149,
+    "owner_role": "tool",
+    "owner_label": "/tmp/agentprof-work/gemini-cli__t08_pip_venv__r2/.venv/bi...",
+    "tls": false,
+    "alpn": [],
+    "tx": 52,
+    "rx": 228,
+    "start_s": 51.0638,
+    "life_s": 83.304,
+    "tcp_handshake_ms": null,
+    "tls_handshake_ms": null,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 12,
+    "name": "pypi.org",
+    "category": "package",
+    "proto": "tcp",
+    "remote": "151.101.192.223:443",
+    "local_port": 33652,
+    "owner": 23149,
+    "owner_role": "tool",
+    "owner_label": "/tmp/agentprof-work/gemini-cli__t08_pip_venv__r2/.venv/bi...",
+    "tls": true,
+    "alpn": [
+     "http/1.1"
+    ],
+    "tx": 1267,
+    "rx": 4750,
+    "start_s": 51.1262,
+    "life_s": 0.152,
+    "tcp_handshake_ms": 30.003,
+    "tls_handshake_ms": 37.129,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 13,
+    "name": "10.255.255.254:53",
+    "category": "dns",
+    "proto": "udp",
+    "remote": "10.255.255.254:53",
+    "local_port": 0,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": false,
+    "alpn": [],
+    "tx": 324,
+    "rx": 1732,
+    "start_s": 64.016,
+    "life_s": 70.351,
+    "tcp_handshake_ms": null,
+    "tls_handshake_ms": null,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 14,
+    "name": "10.255.255.254:53",
+    "category": "dns",
+    "proto": "udp",
+    "remote": "10.255.255.254:53",
+    "local_port": 0,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": false,
+    "alpn": [],
+    "tx": 250,
+    "rx": 1306,
+    "start_s": 64.0258,
+    "life_s": 70.342,
+    "tcp_handshake_ms": null,
+    "tls_handshake_ms": null,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 15,
+    "name": "play.googleapis.com",
+    "category": "telemetry",
+    "proto": "tcp",
+    "remote": "172.217.117.4:443",
+    "local_port": 43098,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": true,
+    "alpn": [],
+    "tx": 106451,
+    "rx": 6715,
+    "start_s": 64.0421,
+    "life_s": 4.315,
+    "tcp_handshake_ms": 15.819,
+    "tls_handshake_ms": 22.996,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 16,
+    "name": "generativelanguage.googleapis.com",
+    "category": "llm",
+    "proto": "tcp",
+    "remote": "172.217.113.4:443",
+    "local_port": 47720,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": true,
+    "alpn": [],
+    "tx": 59084,
+    "rx": 4386,
+    "start_s": 64.0512,
+    "life_s": 10.835,
+    "tcp_handshake_ms": 18.782,
+    "tls_handshake_ms": 27.005,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 17,
+    "name": "play.googleapis.com",
+    "category": "telemetry",
+    "proto": "tcp",
+    "remote": "172.217.115.4:443",
+    "local_port": 35650,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": true,
+    "alpn": [],
+    "tx": 114812,
+    "rx": 3772,
+    "start_s": 64.3651,
+    "life_s": 4.311,
+    "tcp_handshake_ms": 15.019,
+    "tls_handshake_ms": 18.081,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 18,
+    "name": "play.googleapis.com",
+    "category": "telemetry",
+    "proto": "tcp",
+    "remote": "172.217.119.4:443",
+    "local_port": 50848,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": true,
+    "alpn": [],
+    "tx": 119214,
+    "rx": 3772,
+    "start_s": 70.8832,
+    "life_s": 4.291,
+    "tcp_handshake_ms": 11.964,
+    "tls_handshake_ms": 16.975,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 19,
+    "name": "generativelanguage.googleapis.com",
+    "category": "llm",
+    "proto": "tcp",
+    "remote": "172.217.112.4:443",
+    "local_port": 56300,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": true,
+    "alpn": [],
+    "tx": 60775,
+    "rx": 3748,
+    "start_s": 70.9222,
+    "life_s": 11.339,
+    "tcp_handshake_ms": 20.159,
+    "tls_handshake_ms": 22.861,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 20,
+    "name": "10.255.255.254:53",
+    "category": "dns",
+    "proto": "udp",
+    "remote": "10.255.255.254:53",
+    "local_port": 0,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": false,
+    "alpn": [],
+    "tx": 222,
+    "rx": 1278,
+    "start_s": 71.1469,
+    "life_s": 63.221,
+    "tcp_handshake_ms": null,
+    "tls_handshake_ms": null,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 21,
+    "name": "play.googleapis.com",
+    "category": "telemetry",
+    "proto": "tcp",
+    "remote": "172.217.116.4:443",
+    "local_port": 58210,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": true,
+    "alpn": [],
+    "tx": 131646,
+    "rx": 3772,
+    "start_s": 71.1793,
+    "life_s": 4.305,
+    "tcp_handshake_ms": 15.418,
+    "tls_handshake_ms": 17.528,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 22,
+    "name": "10.255.255.254:53",
+    "category": "dns",
+    "proto": "udp",
+    "remote": "10.255.255.254:53",
+    "local_port": 0,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": false,
+    "alpn": [],
+    "tx": 324,
+    "rx": 1732,
+    "start_s": 78.2383,
+    "life_s": 56.129,
+    "tcp_handshake_ms": null,
+    "tls_handshake_ms": null,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 23,
+    "name": "play.googleapis.com",
+    "category": "telemetry",
+    "proto": "tcp",
+    "remote": "172.217.115.4:443",
+    "local_port": 59606,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": true,
+    "alpn": [],
+    "tx": 136047,
+    "rx": 3772,
+    "start_s": 78.2597,
+    "life_s": 4.321,
+    "tcp_handshake_ms": 12.14,
+    "tls_handshake_ms": 15.931,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 24,
+    "name": "generativelanguage.googleapis.com",
+    "category": "llm",
+    "proto": "tcp",
+    "remote": "172.217.114.4:443",
+    "local_port": 33746,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": true,
+    "alpn": [],
+    "tx": 61415,
+    "rx": 6261,
+    "start_s": 78.2631,
+    "life_s": 11.46,
+    "tcp_handshake_ms": 11.209,
+    "tls_handshake_ms": 18.151,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 25,
+    "name": "play.googleapis.com",
+    "category": "telemetry",
+    "proto": "tcp",
+    "remote": "172.217.114.4:443",
+    "local_port": 33762,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": true,
+    "alpn": [],
+    "tx": 144086,
+    "rx": 3772,
+    "start_s": 78.5849,
+    "life_s": 4.361,
+    "tcp_handshake_ms": 12.846,
+    "tls_handshake_ms": 16.793,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 26,
+    "name": "play.googleapis.com",
+    "category": "telemetry",
+    "proto": "tcp",
+    "remote": "172.217.119.4:443",
+    "local_port": 47472,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": true,
+    "alpn": [],
+    "tx": 148466,
+    "rx": 3772,
+    "start_s": 85.7195,
+    "life_s": 4.419,
+    "tcp_handshake_ms": 11.847,
+    "tls_handshake_ms": 15.968,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 27,
+    "name": "10.255.255.254:53",
+    "category": "dns",
+    "proto": "udp",
+    "remote": "10.255.255.254:53",
+    "local_port": 0,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": false,
+    "alpn": [],
+    "tx": 176,
+    "rx": 880,
+    "start_s": 85.7255,
+    "life_s": 48.642,
+    "tcp_handshake_ms": null,
+    "tls_handshake_ms": null,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 28,
+    "name": "generativelanguage.googleapis.com",
+    "category": "llm",
+    "proto": "tcp",
+    "remote": "172.217.116.4:443",
+    "local_port": 47974,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": true,
+    "alpn": [],
+    "tx": 63905,
+    "rx": 4275,
+    "start_s": 85.7414,
+    "life_s": 10.439,
+    "tcp_handshake_ms": 11.824,
+    "tls_handshake_ms": 23.599,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 29,
+    "name": "play.googleapis.com",
+    "category": "telemetry",
+    "proto": "tcp",
+    "remote": "172.217.117.4:443",
+    "local_port": 48410,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": true,
+    "alpn": [],
+    "tx": 156517,
+    "rx": 3772,
+    "start_s": 86.1387,
+    "life_s": 4.373,
+    "tcp_handshake_ms": 12.842,
+    "tls_handshake_ms": 14.777,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 30,
+    "name": "generativelanguage.googleapis.com",
+    "category": "llm",
+    "proto": "tcp",
+    "remote": "172.217.116.4:443",
+    "local_port": 60176,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": true,
+    "alpn": [],
+    "tx": 65047,
+    "rx": 4531,
+    "start_s": 92.2153,
+    "life_s": 10.836,
+    "tcp_handshake_ms": 38.587,
+    "tls_handshake_ms": 38.379,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 31,
+    "name": "play.googleapis.com",
+    "category": "telemetry",
+    "proto": "tcp",
+    "remote": "172.217.114.4:443",
+    "local_port": 49554,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": true,
+    "alpn": [],
+    "tx": 160898,
+    "rx": 3772,
+    "start_s": 92.2157,
+    "life_s": 4.43,
+    "tcp_handshake_ms": 39.27,
+    "tls_handshake_ms": 39.288,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 32,
+    "name": "play.googleapis.com",
+    "category": "telemetry",
+    "proto": "tcp",
+    "remote": "172.217.112.4:443",
+    "local_port": 51398,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": true,
+    "alpn": [],
+    "tx": 168959,
+    "rx": 3772,
+    "start_s": 92.662,
+    "life_s": 4.383,
+    "tcp_handshake_ms": 17.649,
+    "tls_handshake_ms": 25.515,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 33,
+    "name": "play.googleapis.com",
+    "category": "telemetry",
+    "proto": "tcp",
+    "remote": "172.217.119.4:443",
+    "local_port": 52776,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": true,
+    "alpn": [],
+    "tx": 173340,
+    "rx": 3772,
+    "start_s": 99.0481,
+    "life_s": 4.39,
+    "tcp_handshake_ms": 11.886,
+    "tls_handshake_ms": 15.399,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 34,
+    "name": "generativelanguage.googleapis.com",
+    "category": "llm",
+    "proto": "tcp",
+    "remote": "172.217.118.4:443",
+    "local_port": 35436,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": true,
+    "alpn": [],
+    "tx": 206300,
+    "rx": 12901,
+    "start_s": 99.3185,
+    "life_s": 25.312,
+    "tcp_handshake_ms": 12.642,
+    "tls_handshake_ms": 16.657,
+    "exchanges": 3,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 35,
+    "name": "play.googleapis.com",
+    "category": "telemetry",
+    "proto": "tcp",
+    "remote": "172.217.112.4:443",
+    "local_port": 51408,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": true,
+    "alpn": [],
+    "tx": 181372,
+    "rx": 3772,
+    "start_s": 99.4434,
+    "life_s": 4.394,
+    "tcp_handshake_ms": 13.105,
+    "tls_handshake_ms": 17.829,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 36,
+    "name": "play.googleapis.com",
+    "category": "telemetry",
+    "proto": "tcp",
+    "remote": "172.217.117.4:443",
+    "local_port": 42924,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": true,
+    "alpn": [],
+    "tx": 185776,
+    "rx": 3772,
+    "start_s": 108.2495,
+    "life_s": 4.393,
+    "tcp_handshake_ms": 11.967,
+    "tls_handshake_ms": 15.874,
+    "exchanges": 1,
+    "retrans": 2,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 37,
+    "name": "play.googleapis.com",
+    "category": "telemetry",
+    "proto": "tcp",
+    "remote": "172.217.112.4:443",
+    "local_port": 33092,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": true,
+    "alpn": [],
+    "tx": 193805,
+    "rx": 3772,
+    "start_s": 108.6524,
+    "life_s": 4.426,
+    "tcp_handshake_ms": 12.503,
+    "tls_handshake_ms": 14.871,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 38,
+    "name": "10.255.255.254:53",
+    "category": "dns",
+    "proto": "udp",
+    "remote": "10.255.255.254:53",
+    "local_port": 0,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": false,
+    "alpn": [],
+    "tx": 148,
+    "rx": 852,
+    "start_s": 113.9091,
+    "life_s": 20.458,
+    "tcp_handshake_ms": null,
+    "tls_handshake_ms": null,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 39,
+    "name": "play.googleapis.com",
+    "category": "telemetry",
+    "proto": "tcp",
+    "remote": "172.217.117.4:443",
+    "local_port": 50966,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": true,
+    "alpn": [],
+    "tx": 198185,
+    "rx": 3772,
+    "start_s": 113.9305,
+    "life_s": 4.387,
+    "tcp_handshake_ms": 11.738,
+    "tls_handshake_ms": 21.589,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 40,
+    "name": "10.255.255.254:53",
+    "category": "dns",
+    "proto": "udp",
+    "remote": "10.255.255.254:53",
+    "local_port": 0,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": false,
+    "alpn": [],
+    "tx": 176,
+    "rx": 880,
+    "start_s": 114.3034,
+    "life_s": 20.064,
+    "tcp_handshake_ms": null,
+    "tls_handshake_ms": null,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 41,
+    "name": "play.googleapis.com",
+    "category": "telemetry",
+    "proto": "tcp",
+    "remote": "172.217.114.4:443",
+    "local_port": 35076,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": true,
+    "alpn": [],
+    "tx": 210296,
+    "rx": 3772,
+    "start_s": 114.3206,
+    "life_s": 4.447,
+    "tcp_handshake_ms": 11.531,
+    "tls_handshake_ms": 17.025,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 42,
+    "name": "10.255.255.254:53",
+    "category": "dns",
+    "proto": "udp",
+    "remote": "10.255.255.254:53",
+    "local_port": 0,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": false,
+    "alpn": [],
+    "tx": 102,
+    "rx": 454,
+    "start_s": 120.5921,
+    "life_s": 13.775,
+    "tcp_handshake_ms": null,
+    "tls_handshake_ms": null,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 43,
+    "name": "play.googleapis.com",
+    "category": "telemetry",
+    "proto": "tcp",
+    "remote": "172.217.113.4:443",
+    "local_port": 57112,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": true,
+    "alpn": [],
+    "tx": 214677,
+    "rx": 3772,
+    "start_s": 120.608,
+    "life_s": 4.512,
+    "tcp_handshake_ms": 15.458,
+    "tls_handshake_ms": 17.378,
+    "exchanges": 1,
+    "retrans": 3,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 44,
+    "name": "generativelanguage.googleapis.com",
+    "category": "llm",
+    "proto": "tcp",
+    "remote": "172.217.118.4:443",
+    "local_port": 48932,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": true,
+    "alpn": [],
+    "tx": 73341,
+    "rx": 7124,
+    "start_s": 120.6142,
+    "life_s": 11.009,
+    "tcp_handshake_ms": 13.975,
+    "tls_handshake_ms": 17.414,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 45,
+    "name": "play.googleapis.com",
+    "category": "telemetry",
+    "proto": "tcp",
+    "remote": "172.217.112.4:443",
+    "local_port": 46074,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": true,
+    "alpn": [],
+    "tx": 222738,
+    "rx": 3772,
+    "start_s": 121.0731,
+    "life_s": 4.462,
+    "tcp_handshake_ms": 16.436,
+    "tls_handshake_ms": 17.895,
+    "exchanges": 1,
+    "retrans": 1,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 46,
+    "name": "10.255.255.254:53",
+    "category": "dns",
+    "proto": "udp",
+    "remote": "10.255.255.254:53",
+    "local_port": 0,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": false,
+    "alpn": [],
+    "tx": 74,
+    "rx": 426,
+    "start_s": 127.6027,
+    "life_s": 6.765,
+    "tcp_handshake_ms": null,
+    "tls_handshake_ms": null,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 47,
+    "name": "play.googleapis.com",
+    "category": "telemetry",
+    "proto": "tcp",
+    "remote": "172.217.112.4:443",
+    "local_port": 46084,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": true,
+    "alpn": [],
+    "tx": 227118,
+    "rx": 3772,
+    "start_s": 127.6306,
+    "life_s": 4.469,
+    "tcp_handshake_ms": 13.631,
+    "tls_handshake_ms": 18.692,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 48,
+    "name": "generativelanguage.googleapis.com",
+    "category": "llm",
+    "proto": "tcp",
+    "remote": "172.217.112.4:443",
+    "local_port": 46080,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": true,
+    "alpn": [],
+    "tx": 75006,
+    "rx": 4615,
+    "start_s": 127.6335,
+    "life_s": 6.351,
+    "tcp_handshake_ms": 17.513,
+    "tls_handshake_ms": 23.735,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   },
+   {
+    "id": 49,
+    "name": "play.googleapis.com",
+    "category": "telemetry",
+    "proto": "tcp",
+    "remote": "172.217.114.4:443",
+    "local_port": 55718,
+    "owner": 22921,
+    "owner_role": "agent",
+    "owner_label": "/usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -...",
+    "tls": true,
+    "alpn": [],
+    "tx": 235164,
+    "rx": 3772,
+    "start_s": 128.0984,
+    "life_s": 4.558,
+    "tcp_handshake_ms": 12.112,
+    "tls_handshake_ms": 15.704,
+    "exchanges": 1,
+    "retrans": 0,
+    "http_paths": [],
+    "http_status": []
+   }
+  ],
+  "dns_lookups": 15
+ },
+ "files": {
+  "opens_by_role_and_area": {
+   "other": {
+    "system libs": 77,
+    "project/other": 29,
+    "/etc": 9,
+    "/proc": 9,
+    "/dev": 2,
+    "/sys": 2,
+    "/usr/share": 1,
+    "/usr": 1,
+    "dot-dirs (config/cache)": 1
+   },
+   "agent": {
+    "dot-dirs (config/cache)": 335,
+    "system libs": 155,
+    "/etc": 47,
+    "/sys": 25,
+    "/tmp": 17,
+    "/proc": 14,
+    "project/other": 2,
+    "/usr": 1,
+    "/dev": 1
+   },
+   "tool": {
+    "/tmp": 2815,
+    "system libs": 2224,
+    "/etc": 79,
+    "/usr": 36,
+    "/usr/share": 34,
+    "project/other": 28,
+    "/dev": 22,
+    "dot-dirs (config/cache)": 11,
+    "/proc": 5,
+    "?": 3,
+    "python libs": 2
+   }
+  },
+  "top_opened": [
+   [
+    "/tmp/tmpdq8uw8s2/pip-24.0-py3-none-any.whl",
+    754
+   ],
+   [
+    "/home/kshitij_kshitij/.gemini/tmp/gemini-cli-t08-pip-venv-r2/chats/session-2026-11-11T11-53-18a00646.jsonl",
+    87
+   ],
+   [
+    "/etc/ld.so.cache",
+    63
+   ],
+   [
+    "/home/kshitij_kshitij/.gemini/installation_id",
+    61
+   ],
+   [
+    "/lib/x86_64-linux-gnu/libc.so.6",
+    43
+   ],
+   [
+    "/etc/hosts",
+    36
+   ],
+   [
+    "/tmp/agentprof-work/gemini-cli__t08_pip_venv__r2/.venv/lib/python3.12/site-packages",
+    36
+   ],
+   [
+    "/usr/share/locale/locale.alias",
+    33
+   ],
+   [
+    "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache",
+    33
+   ],
+   [
+    "/usr/lib/locale/C.utf8/LC_CTYPE",
+    33
+   ],
+   [
+    "/usr/lib/python3.12",
+    31
+   ],
+   [
+    "/usr/lib/python3.12/lib-dynload",
+    31
+   ],
+   [
+    "/usr/lib/locale/C.utf8/LC_MESSAGES",
+    28
+   ],
+   [
+    "/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES",
+    28
+   ],
+   [
+    "/usr/lib/locale/C.utf8/LC_TIME",
+    28
+   ],
+   [
+    "/usr/lib/locale/C.utf8/LC_COLLATE",
+    26
+   ],
+   [
+    "/usr/lib/locale/C.utf8/LC_NUMERIC",
+    26
+   ],
+   [
+    "/usr/lib/locale/C.utf8/LC_IDENTIFICATION",
+    25
+   ],
+   [
+    "/usr/lib/locale/C.utf8/LC_MEASUREMENT",
+    25
+   ],
+   [
+    "/usr/lib/locale/C.utf8/LC_TELEPHONE",
+    25
+   ],
+   [
+    "/usr/lib/locale/C.utf8/LC_ADDRESS",
+    25
+   ],
+   [
+    "/usr/lib/locale/C.utf8/LC_NAME",
+    25
+   ],
+   [
+    "/usr/lib/locale/C.utf8/LC_PAPER",
+    25
+   ],
+   [
+    "/usr/lib/locale/C.utf8/LC_MONETARY",
+    25
+   ],
+   [
+    "/dev/null",
+    19
+   ]
+  ],
+  "top_failed": [
+   [
+    "/home/kshitij_kshitij/.gemini/google_accounts.json",
+    118
+   ],
+   [
+    "/usr/lib/node_modules/@google/gemini-cli/bundle/package.json",
+    103
+   ],
+   [
+    "/usr/lib/locale/locale-archive",
+    33
+   ],
+   [
+    "/usr/lib/locale/C.UTF-8/LC_CTYPE",
+    33
+   ],
+   [
+    "/usr/lib/locale/C.UTF-8/LC_MESSAGES",
+    28
+   ],
+   [
+    "/usr/lib/locale/C.UTF-8/LC_TIME",
+    28
+   ],
+   [
+    "/usr/lib/locale/C.UTF-8/LC_COLLATE",
+    26
+   ],
+   [
+    "/usr/lib/locale/C.UTF-8/LC_NUMERIC",
+    26
+   ],
+   [
+    "/usr/lib/locale/C.UTF-8/LC_IDENTIFICATION",
+    25
+   ],
+   [
+    "/usr/lib/locale/C.UTF-8/LC_MEASUREMENT",
+    25
+   ],
+   [
+    "/usr/lib/locale/C.UTF-8/LC_TELEPHONE",
+    25
+   ],
+   [
+    "/usr/lib/locale/C.UTF-8/LC_ADDRESS",
+    25
+   ],
+   [
+    "/usr/lib/locale/C.UTF-8/LC_NAME",
+    25
+   ],
+   [
+    "/usr/lib/locale/C.UTF-8/LC_PAPER",
+    25
+   ],
+   [
+    "/usr/lib/locale/C.UTF-8/LC_MONETARY",
+    25
+   ]
+  ],
+  "distinct_paths": 2321,
+  "failed_opens": 685
+ },
+ "tool_calls": [
+  {
+   "id": 0,
+   "pid": 22954,
+   "label": "git rev-parse --show-toplevel",
+   "command": null,
+   "phase": "startup",
+   "start_s": 1.1165,
+   "dur_ms": 1.743,
+   "processes": 1,
+   "programs": [
+    "git"
+   ],
+   "exit_code": 128,
+   "cpu_user_ms": 0.807,
+   "cpu_sys_ms": 0.863,
+   "runq_ms": 0.0,
+   "sleep_ms": 0.0,
+   "io_wait_ms": 0.0,
+   "syscalls": 156,
+   "top_syscalls": [
+    [
+     "rt_sigaction",
+     30
+    ],
+    [
+     "mmap",
+     20
+    ],
+    [
+     "newfstatat",
+     17
+    ],
+    [
+     "openat",
+     16
+    ],
+    [
+     "close",
+     14
+    ],
+    [
+     "fstat",
+     12
+    ]
+   ],
+   "file_read": 7331,
+   "file_write": 0,
+   "pipe_other_rd": 0,
+   "pipe_other_wr": 1,
+   "net_tx": 0,
+   "net_rx": 0,
+   "opens": 16,
+   "open_fail": 4,
+   "peak_rss_kb": null
+  },
+  {
+   "id": 1,
+   "pid": 22955,
+   "label": "git rev-parse --show-toplevel",
+   "command": null,
+   "phase": "startup",
+   "start_s": 1.163,
+   "dur_ms": 1.525,
+   "processes": 1,
+   "programs": [
+    "git"
+   ],
+   "exit_code": 128,
+   "cpu_user_ms": 0.697,
+   "cpu_sys_ms": 0.748,
+   "runq_ms": 0.0,
+   "sleep_ms": 0.0,
+   "io_wait_ms": 0.0,
+   "syscalls": 156,
+   "top_syscalls": [
+    [
+     "rt_sigaction",
+     30
+    ],
+    [
+     "mmap",
+     20
+    ],
+    [
+     "newfstatat",
+     17
+    ],
+    [
+     "openat",
+     16
+    ],
+    [
+     "close",
+     14
+    ],
+    [
+     "fstat",
+     12
+    ]
+   ],
+   "file_read": 7331,
+   "file_write": 0,
+   "pipe_other_rd": 0,
+   "pipe_other_wr": 1,
+   "net_tx": 0,
+   "net_rx": 0,
+   "opens": 16,
+   "open_fail": 4,
+   "peak_rss_kb": null
+  },
+  {
+   "id": 2,
+   "pid": 22956,
+   "label": "/bin/sh -c lspci -vvv  2>/dev/null",
+   "command": "lspci -vvv  2>/dev/null",
+   "phase": "startup",
+   "start_s": 1.286,
+   "dur_ms": 1.206,
+   "processes": 1,
+   "programs": [
+    "sh"
+   ],
+   "exit_code": 127,
+   "cpu_user_ms": 0.468,
+   "cpu_sys_ms": 0.658,
+   "runq_ms": 0.0,
+   "sleep_ms": 0.0,
+   "io_wait_ms": 0.0,
+   "syscalls": 108,
+   "top_syscalls": [
+    [
+     "rt_sigaction",
+     36
+    ],
+    [
+     "newfstatat",
+     9
+    ],
+    [
+     "mmap",
+     8
+    ],
+    [
+     "close",
+     7
+    ],
+    [
+     "fcntl",
+     5
+    ],
+    [
+     "dup2",
+     5
+    ]
+   ],
+   "file_read": 2400,
+   "file_write": 0,
+   "pipe_other_rd": 0,
+   "pipe_other_wr": 30,
+   "net_tx": 0,
+   "net_rx": 0,
+   "opens": 3,
+   "open_fail": 0,
+   "peak_rss_kb": null
+  },
+  {
+   "id": 3,
+   "pid": 22957,
+   "label": "/bin/sh -c clinfo --raw",
+   "command": "clinfo --raw",
+   "phase": "startup",
+   "start_s": 1.29,
+   "dur_ms": 1.056,
+   "processes": 1,
+   "programs": [
+    "sh"
+   ],
+   "exit_code": 127,
+   "cpu_user_ms": 0.376,
+   "cpu_sys_ms": 0.61,
+   "runq_ms": 0.0,
+   "sleep_ms": 0.0,
+   "io_wait_ms": 0.0,
+   "syscalls": 100,
+   "top_syscalls": [
+    [
+     "rt_sigaction",
+     36
+    ],
+    [
+     "newfstatat",
+     9
+    ],
+    [
+     "mmap",
+     8
+    ],
+    [
+     "write",
+     4
+    ],
+    [
+     "close",
+     4
+    ],
+    [
+     "fcntl",
+     3
+    ]
+   ],
+   "file_read": 2400,
+   "file_write": 0,
+   "pipe_other_rd": 0,
+   "pipe_other_wr": 1,
+   "net_tx": 0,
+   "net_rx": 0,
+   "opens": 2,
+   "open_fail": 0,
+   "peak_rss_kb": null
+  },
+  {
+   "id": 4,
+   "pid": 22958,
+   "label": "/bin/sh -c xdpyinfo 2>/dev/null | grep 'depth of root window' | awk '{ print $5 }'",
+   "command": "xdpyinfo 2>/dev/null | grep 'depth of root window' | awk '{ print $5 }'",
+   "phase": "startup",
+   "start_s": 1.2942,
+   "dur_ms": 4.164,
+   "processes": 4,
+   "programs": [
+    "awk",
+    "grep",
+    "sh",
+    "xdpyinfo"
+   ],
+   "exit_code": 0,
+   "cpu_user_ms": 3.406,
+   "cpu_sys_ms": 2.968,
+   "runq_ms": 0.0,
+   "sleep_ms": 5.237,
+   "io_wait_ms": 0.0,
+   "syscalls": 735,
+   "top_syscalls": [
+    [
+     "mmap",
+     149
+    ],
+    [
+     "openat",
+     76
+    ],
+    [
+     "close",
+     75
+    ],
+    [
+     "fstat",
+     63
+    ],
+    [
+     "read",
+     62
+    ],
+    [
+     "rt_sigaction",
+     43
+    ]
+   ],
+   "file_read": 55141,
+   "file_write": 0,
+   "pipe_other_rd": 95511,
+   "pipe_other_wr": 95512,
+   "net_tx": 0,
+   "net_rx": 0,
+   "opens": 76,
+   "open_fail": 19,
+   "peak_rss_kb": null
+  },
+  {
+   "id": 5,
+   "pid": 22962,
+   "label": "/bin/sh -c xrandr --verbose 2>/dev/null",
+   "command": "xrandr --verbose 2>/dev/null",
+   "phase": "startup",
+   "start_s": 1.2997,
+   "dur_ms": 3.813,
+   "processes": 2,
+   "programs": [
+    "sh",
+    "xrandr"
+   ],
+   "exit_code": 0,
+   "cpu_user_ms": 1.358,
+   "cpu_sys_ms": 1.702,
+   "runq_ms": 0.0,
+   "sleep_ms": 3.084,
+   "io_wait_ms": 0.097,
+   "syscalls": 401,
+   "top_syscalls": [
+    [
+     "recvmsg",
+     71
+    ],
+    [
+     "mmap",
+     59
+    ],
+    [
+     "poll",
+     52
+    ],
+    [
+     "rt_sigaction",
+     36
+    ],
+    [
+     "writev",
+     26
+    ],
+    [
+     "close",
+     20
+    ]
+   ],
+   "file_read": 13120,
+   "file_write": 0,
+   "pipe_other_rd": 0,
+   "pipe_other_wr": 1,
+   "net_tx": 0,
+   "net_rx": 0,
+   "opens": 15,
+   "open_fail": 0,
+   "peak_rss_kb": null
+  },
+  {
+   "id": 6,
+   "pid": 23081,
+   "label": "/usr/bin/bash -c shopt -u promptvars nullglob extglob nocaseglob dotglob; _bgpids_file=/tmp/gemini-shell-xRdhsR/bgpids.tmp\n(\n  trap 'jobs -p > \"$_bgpids_file...",
+   "command": "shopt -u promptvars nullglob extglob nocaseglob dotglob; _bgpids_file=/tmp/gemini-shell-xRdhsR/bgpids.tmp\n(\n  trap 'jobs -p > \"$_bgpids_file\"' EXIT\npython3 --version\n)\n__code=$?\nexit $__code",
+   "phase": "act",
+   "start_s": 36.1554,
+   "dur_ms": 3.619,
+   "processes": 3,
+   "programs": [
+    "bash",
+    "python3"
+   ],
+   "exit_code": 0,
+   "cpu_user_ms": 1.797,
+   "cpu_sys_ms": 1.542,
+   "runq_ms": 0.0,
+   "sleep_ms": 2.669,
+   "io_wait_ms": 0.0,
+   "syscalls": 390,
+   "top_syscalls": [
+    [
+     "rt_sigaction",
+     94
+    ],
+    [
+     "mmap",
+     47
+    ],
+    [
+     "openat",
+     44
+    ],
+    [
+     "close",
+     31
+    ],
+    [
+     "rt_sigprocmask",
+     28
+    ],
+    [
+     "fstat",
+     27
+    ]
+   ],
+   "file_read": 14120,
+   "file_write": 0,
+   "pipe_other_rd": 0,
+   "pipe_other_wr": 1,
+   "net_tx": 0,
+   "net_rx": 0,
+   "opens": 44,
+   "open_fail": 16,
+   "peak_rss_kb": null
+  },
+  {
+   "id": 7,
+   "pid": 23102,
+   "label": "/usr/bin/bash -c shopt -u promptvars nullglob extglob nocaseglob dotglob; _bgpids_file=/tmp/gemini-shell-nKoxEi/bgpids.tmp\n(\n  trap 'jobs -p > \"$_bgpids_file...",
+   "command": "shopt -u promptvars nullglob extglob nocaseglob dotglob; _bgpids_file=/tmp/gemini-shell-nKoxEi/bgpids.tmp\n(\n  trap 'jobs -p > \"$_bgpids_file\"' EXIT\npython3 -m venv .venv\n)\n__code=$?\nexit $__code",
+   "phase": "act",
+   "start_s": 43.2868,
+   "dur_ms": 2066.026,
+   "processes": 21,
+   "programs": [
+    "bash",
+    "cut",
+    "getopt",
+    "lsb_release",
+    "python3",
+    "tr",
+    "uname"
+   ],
+   "exit_code": 0,
+   "cpu_user_ms": 1944.621,
+   "cpu_sys_ms": 105.391,
+   "runq_ms": 0.086,
+   "sleep_ms": 8156.305,
+   "io_wait_ms": 14.275,
+   "syscalls": 34684,
+   "top_syscalls": [
+    [
+     "newfstatat",
+     7795
+    ],
+    [
+     "lseek",
+     5297
+    ],
+    [
+     "fstat",
+     3739
+    ],
+    [
+     "read",
+     3108
+    ],
+    [
+     "openat",
+     3051
+    ],
+    [
+     "close",
+     3012
+    ]
+   ],
+   "file_read": 23886208,
+   "file_write": 15087966,
+   "pipe_other_rd": 3386,
+   "pipe_other_wr": 336,
+   "net_tx": 0,
+   "net_rx": 0,
+   "opens": 3051,
+   "open_fail": 146,
+   "peak_rss_kb": 75268
+  },
+  {
+   "id": 8,
+   "pid": 23147,
+   "label": "/usr/bin/bash -c shopt -u promptvars nullglob extglob nocaseglob dotglob; _bgpids_file=/tmp/gemini-shell-d2lW6u/bgpids.tmp\n(\n  trap 'jobs -p > \"$_bgpids_file...",
+   "command": "shopt -u promptvars nullglob extglob nocaseglob dotglob; _bgpids_file=/tmp/gemini-shell-d2lW6u/bgpids.tmp\n(\n  trap 'jobs -p > \"$_bgpids_file\"' EXIT\n.venv/bin/pip install tabulate\n)\n__code=$?\nexit $__code",
+   "phase": "act",
+   "start_s": 50.828,
+   "dur_ms": 461.227,
+   "processes": 19,
+   "programs": [
+    "bash",
+    "cut",
+    "getopt",
+    "lsb_release",
+    "pip",
+    "tr",
+    "uname"
+   ],
+   "exit_code": 0,
+   "cpu_user_ms": 310.909,
+   "cpu_sys_ms": 26.813,
+   "runq_ms": 0.075,
+   "sleep_ms": 1044.042,
+   "io_wait_ms": 8.298,
+   "syscalls": 13678,
+   "top_syscalls": [
+    [
+     "newfstatat",
+     3596
+    ],
+    [
+     "fstat",
+     1541
+    ],
+    [
+     "read",
+     1431
+    ],
+    [
+     "lseek",
+     1332
+    ],
+    [
+     "openat",
+     1077
+    ],
+    [
+     "close",
+     1048
+    ]
+   ],
+   "file_read": 11093236,
+   "file_write": 377196,
+   "pipe_other_rd": 3230,
+   "pipe_other_wr": 180,
+   "net_tx": 1319,
+   "net_rx": 4978,
+   "opens": 1077,
+   "open_fail": 133,
+   "peak_rss_kb": 47396
+  },
+  {
+   "id": 9,
+   "pid": 23268,
+   "label": "/usr/bin/bash -c shopt -u promptvars nullglob extglob nocaseglob dotglob; _bgpids_file=/tmp/gemini-shell-GUrCNW/bgpids.tmp\n(\n  trap 'jobs -p > \"$_bgpids_file...",
+   "command": "shopt -u promptvars nullglob extglob nocaseglob dotglob; _bgpids_file=/tmp/gemini-shell-GUrCNW/bgpids.tmp\n(\n  trap 'jobs -p > \"$_bgpids_file\"' EXIT\npython3 -c \"print(1)\"\n)\n__code=$?\nexit $__code",
+   "phase": "act",
+   "start_s": 85.7014,
+   "dur_ms": 17.19,
+   "processes": 3,
+   "programs": [
+    "bash",
+    "python3"
+   ],
+   "exit_code": 0,
+   "cpu_user_ms": 14.108,
+   "cpu_sys_ms": 2.666,
+   "runq_ms": 0.0,
+   "sleep_ms": 29.281,
+   "io_wait_ms": 0.0,
+   "syscalls": 868,
+   "top_syscalls": [
+    [
+     "rt_sigaction",
+     160
+    ],
+    [
+     "newfstatat",
+     147
+    ],
+    [
+     "openat",
+     79
+    ],
+    [
+     "fstat",
+     78
+    ],
+    [
+     "close",
+     61
+    ],
+    [
+     "mmap",
+     52
+    ]
+   ],
+   "file_read": 319007,
+   "file_write": 0,
+   "pipe_other_rd": 0,
+   "pipe_other_wr": 1,
+   "net_tx": 0,
+   "net_rx": 0,
+   "opens": 79,
+   "open_fail": 21,
+   "peak_rss_kb": null
+  },
+  {
+   "id": 10,
+   "pid": 23313,
+   "label": "/usr/bin/bash -c shopt -u promptvars nullglob extglob nocaseglob dotglob; _bgpids_file=/tmp/gemini-shell-0tKM5X/bgpids.tmp\n(\n  trap 'jobs -p > \"$_bgpids_file...",
+   "command": "shopt -u promptvars nullglob extglob nocaseglob dotglob; _bgpids_file=/tmp/gemini-shell-0tKM5X/bgpids.tmp\n(\n  trap 'jobs -p > \"$_bgpids_file\"' EXIT\npython3 -m pip install --user tabulate\n)\n__code=$?\nexit $__code",
+   "phase": "act",
+   "start_s": 99.0333,
+   "dur_ms": 253.02,
+   "processes": 3,
+   "programs": [
+    "bash",
+    "python3"
+   ],
+   "exit_code": 1,
+   "cpu_user_ms": 236.241,
+   "cpu_sys_ms": 15.426,
+   "runq_ms": 0.0,
+   "sleep_ms": 499.825,
+   "io_wait_ms": 0.0,
+   "syscalls": 9048,
+   "top_syscalls": [
+    [
+     "newfstatat",
+     2247
+    ],
+    [
+     "fstat",
+     1201
+    ],
+    [
+     "read",
+     1136
+    ],
+    [
+     "lseek",
+     1074
+    ],
+    [
+     "openat",
+     699
+    ],
+    [
+     "close",
+     671
+    ]
+   ],
+   "file_read": 9632709,
+   "file_write": 0,
+   "pipe_other_rd": 0,
+   "pipe_other_wr": 1,
+   "net_tx": 0,
+   "net_rx": 0,
+   "opens": 699,
+   "open_fail": 33,
+   "peak_rss_kb": 12084
+  },
+  {
+   "id": 11,
+   "pid": 23340,
+   "label": "/usr/bin/bash -c shopt -u promptvars nullglob extglob nocaseglob dotglob; _bgpids_file=/tmp/gemini-shell-BrUKcN/bgpids.tmp\n(\n  trap 'jobs -p > \"$_bgpids_file...",
+   "command": "shopt -u promptvars nullglob extglob nocaseglob dotglob; _bgpids_file=/tmp/gemini-shell-BrUKcN/bgpids.tmp\n(\n  trap 'jobs -p > \"$_bgpids_file\"' EXIT\npython3 -c \"\nimport sys\nimport site\n# add .venv site-packages to sys.path\nimport glob\nsite_packages = glob.glob('.venv/lib/python*/site-packages')[0]\nsys.path.insert(0, site_packages)\n\nimport csv\nfrom tabulate import tabulate\n\nwith open('data.csv', mode='r', encoding='utf-8') as f:\n    reader = csv.reader(f)\n    data = list(reader)\n\nheader = data[0]\nrows = data[1:]\n\ntable = tabulate(rows, headers=header, tablefmt='grid')\nwith open('table.txt', mode='w', encoding='utf-8') as out:\n    out.write(table)\nprint('SUCCESS')\n\"\n)\n__code=$?\nexit $__code",
+   "phase": "act",
+   "start_s": 108.2331,
+   "dur_ms": 67.083,
+   "processes": 3,
+   "programs": [
+    "bash",
+    "python3"
+   ],
+   "exit_code": 0,
+   "cpu_user_ms": 60.011,
+   "cpu_sys_ms": 6.05,
+   "runq_ms": 0.0,
+   "sleep_ms": 127.478,
+   "io_wait_ms": 0.0,
+   "syscalls": 2275,
+   "top_syscalls": [
+    [
+     "newfstatat",
+     623
+    ],
+    [
+     "fstat",
+     260
+    ],
+    [
+     "read",
+     218
+    ],
+    [
+     "lseek",
+     204
+    ],
+    [
+     "openat",
+     181
+    ],
+    [
+     "close",
+     164
+    ]
+   ],
+   "file_read": 2432368,
+   "file_write": 188,
+   "pipe_other_rd": 0,
+   "pipe_other_wr": 1,
+   "net_tx": 0,
+   "net_rx": 0,
+   "opens": 181,
+   "open_fail": 21,
+   "peak_rss_kb": null
+  }
+ ],
+ "helpers": [],
+ "process_tree": [
+  "22903 node /usr/bin/gemini -m gemini-3.5-flash-lite -p Create a Python virtual environment in .venv, in...  (+0.000s, 133971.7 ms, cpu u/s 646.4/27.8 ms, exit 0)",
+  "  22921 [AGENT] /usr/bin/node --max-old-space-size=3843 /usr/bin/gemini -m gemini-3.5-flash-lite -p Create a Pyth...  (+0.460s, 133502.2 ms, cpu u/s 2256.1/132.6 ms, exit 0)",
+  "    22954 [tool 0] git rev-parse --show-toplevel  (+1.116s, 1.7 ms, cpu u/s 0.8/0.9 ms, exit 128)",
+  "    22955 [tool 1] git rev-parse --show-toplevel  (+1.163s, 1.5 ms, cpu u/s 0.7/0.7 ms, exit 128)",
+  "    22956 [tool 2] /bin/sh -c lspci -vvv  2>/dev/null  (+1.286s, 1.2 ms, cpu u/s 0.5/0.7 ms, exit 127)",
+  "    22957 [tool 3] /bin/sh -c clinfo --raw  (+1.290s, 1.1 ms, cpu u/s 0.4/0.6 ms, exit 127)",
+  "    22958 [tool 4] /bin/sh -c xdpyinfo 2>/dev/null | grep 'depth of root window' | awk '{ print $5 }'  (+1.294s, 4.2 ms, cpu u/s 0.5/1.0 ms, exit 0)",
+  "      22959 [tool 4] xdpyinfo  (+1.295s, 2.5 ms, cpu u/s 1.1/0.9 ms, exit 0)",
+  "      22960 [tool 4] grep depth of root window  (+1.296s, 2.6 ms, cpu u/s 0.6/0.4 ms, exit 0)",
+  "      22961 [tool 4] awk { print $5 }  (+1.296s, 2.6 ms, cpu u/s 1.2/0.6 ms, exit 0)",
+  "    22962 [tool 5] /bin/sh -c xrandr --verbose 2>/dev/null  (+1.300s, 3.8 ms, cpu u/s 0.5/0.7 ms, exit 0)",
+  "      22963 [tool 5] xrandr --verbose  (+1.301s, 2.5 ms, cpu u/s 0.9/1.0 ms, exit 0)",
+  "    23081 [tool 6] /usr/bin/bash -c shopt -u promptvars nullglob extglob nocaseglob dotglob; _bgpids_file=/tmp/gemin...  (+36.155s, 3.6 ms, cpu u/s 0.8/0.9 ms, exit 0)",
+  "      23082 [tool 6] (fork of bash, no exec)  (+36.157s, 1.8 ms, cpu u/s 0.5/0.3 ms, exit 0)",
+  "        23083 [tool 6] python3 --version  (+36.158s, 0.9 ms, cpu u/s 0.5/0.3 ms, exit 0)",
+  "    23102 [tool 7] /usr/bin/bash -c shopt -u promptvars nullglob extglob nocaseglob dotglob; _bgpids_file=/tmp/gemin...  (+43.287s, 2066.0 ms, cpu u/s 1.0/1.0 ms, exit 0)",
+  "      23103 [tool 7] (fork of bash, no exec)  (+43.289s, 2063.9 ms, cpu u/s 0.3/0.2 ms, exit 0)",
+  "        23104 [tool 7] python3 -m venv .venv  (+43.289s, 2063.0 ms, cpu u/s 30.9/3.3 ms, exit 0)",
+  "          23105 [tool 7] /tmp/agentprof-work/gemini-cli__t08_pip_venv__r2/.venv/bin/python3 -m ensurepip --upgrade --defau...  (+43.318s, 2028.4 ms, cpu u/s 36.0/4.6 ms, exit 0)",
+  "            23106 [tool 7] /tmp/agentprof-work/gemini-cli__t08_pip_venv__r2/.venv/bin/python3 -W ignore::DeprecationWarning ...  (+43.353s, 1986.0 ms, cpu u/s 1873.0/92.7 ms, exit 0)",
+  "              23113 [tool 7] /bin/sh /usr/bin/lsb_release -a  (+44.383s, 6.1 ms, cpu u/s 0.7/0.9 ms, exit 0)",
+  "                23114 [tool 7] getopt --name lsb_release -o hvidrcas -l help,version,id,description,release,codename,all,short -...  (+44.384s, 0.7 ms, cpu u/s 0.3/0.3 ms, exit 0)",
+  "                23115 [tool 7] (fork of lsb_release, no exec)  (+44.385s, 1.0 ms, cpu u/s 0.1/0.3 ms, exit 0)",
+  "                  23116 [tool 7] (fork of lsb_release, no exec)  (+44.385s, 0.1 ms, cpu u/s 0.1/0.0 ms, exit 0)",
+  "                  23117 [tool 7] cut -c1  (+44.385s, 0.6 ms, cpu u/s 0.3/0.3 ms, exit 0)",
+  "                  23118 [tool 7] tr [:lower:] [:upper:]  (+44.385s, 0.6 ms, cpu u/s 0.3/0.3 ms, exit 0)",
+  "                23119 [tool 7] (fork of lsb_release, no exec)  (+44.386s, 0.9 ms, cpu u/s 0.1/0.1 ms, exit 0)",
+  "                  23120 [tool 7] (fork of lsb_release, no exec)  (+44.386s, 0.1 ms, cpu u/s 0.0/0.0 ms, exit 0)",
+  "                  23121 [tool 7] cut -c2-  (+44.386s, 0.6 ms, cpu u/s 0.3/0.3 ms, exit 0)",
+  "                23122 [tool 7] (fork of lsb_release, no exec)  (+44.387s, 0.9 ms, cpu u/s 0.1/0.2 ms, exit 0)",
+  "                  23123 [tool 7] (fork of lsb_release, no exec)  (+44.387s, 0.1 ms, cpu u/s 0.0/0.0 ms, exit 0)",
+  "                  23124 [tool 7] tr [:upper:] [:lower:]  (+44.387s, 0.6 ms, cpu u/s 0.3/0.2 ms, exit 0)",
+  "                23125 [tool 7] (fork of lsb_release, no exec)  (+44.388s, 0.9 ms, cpu u/s 0.1/0.2 ms, exit 0)",
+  "                  23126 [tool 7] (fork of lsb_release, no exec)  (+44.388s, 0.1 ms, cpu u/s 0.0/0.0 ms, exit 0)",
+  "                  23127 [tool 7] tr [:upper:] [:lower:]  (+44.388s, 0.6 ms, cpu u/s 0.3/0.2 ms, exit 0)",
+  "              23128 [tool 7] uname -rs  (+44.390s, 0.5 ms, cpu u/s 0.3/0.2 ms, exit 0)",
+  "    23147 [tool 8] /usr/bin/bash -c shopt -u promptvars nullglob extglob nocaseglob dotglob; _bgpids_file=/tmp/gemin...  (+50.828s, 461.2 ms, cpu u/s 0.9/1.0 ms, exit 0)",
+  "      23148 [tool 8] (fork of bash, no exec)  (+50.830s, 459.2 ms, cpu u/s 0.5/0.4 ms, exit 0)",
+  "        23149 [tool 8] /tmp/agentprof-work/gemini-cli__t08_pip_venv__r2/.venv/bin/python3 .venv/bin/pip install tabulate  (+50.830s, 456.9 ms, cpu u/s 306.4/22.2 ms, exit 0)",
+  "          23150 [tool 8] /bin/sh /usr/bin/lsb_release -a  (+51.036s, 5.7 ms, cpu u/s 0.6/0.8 ms, exit 0)",
+  "            23151 [tool 8] getopt --name lsb_release -o hvidrcas -l help,version,id,description,release,codename,all,short -...  (+51.037s, 0.7 ms, cpu u/s 0.3/0.3 ms, exit 0)",
+  "            23152 [tool 8] (fork of lsb_release, no exec)  (+51.038s, 1.1 ms, cpu u/s 0.1/0.3 ms, exit 0)",
+  "              23153 [tool 8] (fork of lsb_release, no exec)  (+51.038s, 0.1 ms, cpu u/s 0.1/0.0 ms, exit 0)",
+  "              23154 [tool 8] cut -c1  (+51.038s, 0.6 ms, cpu u/s 0.3/0.2 ms, exit 0)",
+  "              23155 [tool 8] tr [:lower:] [:upper:]  (+51.038s, 0.6 ms, cpu u/s 0.3/0.3 ms, exit 0)",
+  "            23156 [tool 8] (fork of lsb_release, no exec)  (+51.039s, 0.9 ms, cpu u/s 0.1/0.2 ms, exit 0)",
+  "              23157 [tool 8] (fork of lsb_release, no exec)  (+51.039s, 0.1 ms, cpu u/s 0.1/0.0 ms, exit 0)",
+  "              23158 [tool 8] cut -c2-  (+51.039s, 0.5 ms, cpu u/s 0.3/0.2 ms, exit 0)",
+  "            23159 [tool 8] (fork of lsb_release, no exec)  (+51.040s, 0.8 ms, cpu u/s 0.1/0.2 ms, exit 0)",
+  "              23160 [tool 8] (fork of lsb_release, no exec)  (+51.040s, 0.1 ms, cpu u/s 0.0/0.0 ms, exit 0)",
+  "              23161 [tool 8] tr [:upper:] [:lower:]  (+51.040s, 0.5 ms, cpu u/s 0.3/0.2 ms, exit 0)",
+  "            23162 [tool 8] (fork of lsb_release, no exec)  (+51.041s, 0.8 ms, cpu u/s 0.1/0.1 ms, exit 0)",
+  "              23163 [tool 8] (fork of lsb_release, no exec)  (+51.041s, 0.1 ms, cpu u/s 0.0/0.0 ms, exit 0)",
+  "              23164 [tool 8] tr [:upper:] [:lower:]  (+51.041s, 0.5 ms, cpu u/s 0.3/0.2 ms, exit 0)",
+  "          23165 [tool 8] uname -rs  (+51.043s, 0.6 ms, cpu u/s 0.3/0.2 ms, exit 0)",
+  "    23268 [tool 9] /usr/bin/bash -c shopt -u promptvars nullglob extglob nocaseglob dotglob; _bgpids_file=/tmp/gemin...  (+85.701s, 17.2 ms, cpu u/s 0.9/1.2 ms, exit 0)",
+  "      23269 [tool 9] (fork of bash, no exec)  (+85.703s, 15.0 ms, cpu u/s 0.3/0.3 ms, exit 0)",
+  "        23270 [tool 9] python3 -c print(1)  (+85.704s, 14.1 ms, cpu u/s 12.9/1.1 ms, exit 0)",
+  "    23313 [tool 10] /usr/bin/bash -c shopt -u promptvars nullglob extglob nocaseglob dotglob; _bgpids_file=/tmp/gemin...  (+99.033s, 253.0 ms, cpu u/s 1.0/1.6 ms, exit 1)",
+  "      23314 [tool 10] (fork of bash, no exec)  (+99.036s, 250.2 ms, cpu u/s 0.4/0.2 ms, exit 1)",
+  "        23315 [tool 10] python3 -m pip install --user tabulate  (+99.036s, 248.4 ms, cpu u/s 234.8/13.6 ms, exit 1)",
+  "    23340 [tool 11] /usr/bin/bash -c shopt -u promptvars nullglob extglob nocaseglob dotglob; _bgpids_file=/tmp/gemin...  (+108.233s, 67.1 ms, cpu u/s 1.1/1.5 ms, exit 0)",
+  "      23341 [tool 11] (fork of bash, no exec)  (+108.236s, 64.2 ms, cpu u/s 0.5/0.3 ms, exit 0)",
+  "        23342 [tool 11] python3 -c \nimport sys\nimport site\n# add .venv site-packages to sys.path\nimport glob\nsite_package...  (+108.236s, 62.9 ms, cpu u/s 58.4/4.3 ms, exit 0)"
+ ],
+ "tracer": {
+  "events": 7656,
+  "ringbuf_dropped": 0,
+  "bpf_load_s": 0.07,
+  "warnings": [
+   "PID namespace detected (WSL2/container): PIDs are translated to this namespace"
+  ],
+  "bpf_prog_stats": {
+   "tp_fork": [
+    1220874,
+    522
+   ],
+   "tp_exec": [
+    840007,
+    462
+   ],
+   "tp_exit": [
+    944631,
+    522
+   ],
+   "tp_switch": [
+    100878765,
+    221117
+   ],
+   "raw_sys_enter": [
+    83414091,
+    758933
+   ],
+   "raw_sys_exit": [
+    186023181,
+    758929
+   ],
+   "tp_send_len": [
+    6288668,
+    14826
+   ],
+   "tp_recv_len": [
+    9176235,
+    9467
+   ],
+   "tp_set_state": [
+    2937901,
+    197
+   ],
+   "tp_retrans": [
+    129325,
+    7
+   ]
+  },
+  "bpf_total_ms": 391.854,
+  "bpf_runs": 1764982,
+  "bpf_avg_ns": 222.0,
+  "bpf_cpu_pct_of_run": 0.29
+ },
+ "paper_metrics": {
+  "os_exec_like_pct": 3.88,
+  "tool_exec_share_pct": 2.15,
+  "llm_share_pct": 96.12,
+  "llm_calls": 17,
+  "tool_calls": 12,
+  "tool_calls_per_llm_call": 0.71,
+  "provider_backoff_pct": 0.0,
+  "memory_peak_to_avg": 1.21,
+  "req_bytes_growth": 1.61,
+  "append_bytes_median": 1609.5,
+  "resp_to_req_bytes": 0.0585
+ }
+}
