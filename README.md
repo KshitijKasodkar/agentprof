@@ -1,4 +1,4 @@
-# agentprof: tracing AI agents with eBPF
+# Agentprof: tracing AI agents with eBPF
 
 agentprof traces AI coding agents from the Linux kernel with eBPF, without modifying the agents. For each run it records:
 
