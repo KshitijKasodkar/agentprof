@@ -73,4 +73,4 @@ The full comparison is in `experiments/results/comparison.html`. GitHub shows HT
 - Local models (Ollama), first on the laptop and then on PARAM (V100), with results both with and without profiling
 - Standard benchmarks (Terminal-Bench, SWE-bench), cold runs with caches cleared, per-call distributions and token counts
 
-The code was written with AI assistance (Claude).
+
